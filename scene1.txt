@@ -8,13 +8,18 @@ Depuis quelques semaines tu échaffaudes un plan avec ton ami pour débuter cett
 
 Après l'école vous vous retrouvez souvent pour discuter jusqu'au dîner...
 
-"Alors demain c'est le grand jour ? Après les cours on prend la premier aéronef pour Transalia et on improvise une fois sur place ? T'aurais envie de faire quoi en premier une fois là-bas ?"
+"Alors demain c'est le grand jour ? Après les cours on prend la premier aéronef pour Transalia et on improvise une fois sur place ! T'aurais envie de faire quoi en premier une fois là-bas ?"
 
 Choix 1: "Il faudrait qu'on se trouve un endroit où s'installer ! Je veux vivre en hauteur, un petit jardin suspendu ce serait top pour avoir une vue imprenable sur la cité ! Et toi alors ?"
-Choix 2: "Il paraît que les soirées sont très animées là bas, ça nous changera du calme mortifère de Voilyverre"
+Choix 2: "Il paraît que les soirées sont très animées là bas, ça nous changera du calme mortifère de Voilyverre, ça te va ?"
 Choix 3: "Je veux manger une bonne glace cramoisie électrique ! Ca fait longtemps que je veux goûter une des glaces du magasin Les Glaces Cuivrées de Arnold Doucet, j'en ai toujours eu envie ! Et toi, tu aimerais faire quoi en arrivant ?"
 
 
-Path 1: "Ah oui carrément ! On aura tous loisirs de décider de nos destinations si on a une belle vue d'ensemble sur tout notre terrain de jeu ! Ce que j'aimerai ce serait d'aller me prendre une glace chez Arnold Doucet ! Son magasin s'appelle Les Glaces Cuivrées si je me souviens bien ! Le parfum que j'aimerai goûter en premier c'est Nectar de nuage au citron solaire !"
-Path 2: 
-Path 3: 
+Path 1: "Ah oui carrément ! On aura tout loisir de décider de nos destinations si on a une belle vue d'ensemble sur tout notre terrain de jeu ! Ce que j'aimerai ce serait d'aller me prendre une glace chez Arnold Doucet ! Son magasin s'appelle Les Glaces Cuivrées si je me souviens bien ! Le parfum Nectar de nuage au citron solaire me fait saliver, je brûle d'envie d'y goûter !"
+Path 2: "Trop bien ! Ça nous mettra tout de suite dans l'ambiance, il faudra qu'on se trouve un coin où s'installer aussi, je me disais qu'un spot en hauteur nous permettra d'y voir plus clair sur ce qu'on voudra faire une fois sur place."
+Path 3: "Incroyable ! Oui ça me donne bien envie aussi ! Pour ma part ce sera parfum Nectar de nuage au citron solaire, je salive rien que d'y penser !"
+
+
+Alix: "Bon c'est pas tout ça mais je dois rentrer ! C'était sympa, j'ai hâte d'être à demain. Bonne soirée !"
+
+Johan: "Ça marche, à demain !"
