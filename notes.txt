@@ -1,0 +1,11 @@
+Pour creuser prévoir les mots suivants:
+pelle
+pioche
+
+Pour transporter le bras prévoir les mots suivants:
+sac
+brouette
+chariot
+
+
+Pour les actions du genre 'Ouvrir portail' ; 'Escalader portail' ; etc. voir si c'est compatible avec tous les mots, mais on peut spliter les mots en liste, retirer les 2 dernier caractères et remplacer par 'ez' pour faire une phrase 'Vous ouvrez le portail' par exemple.
