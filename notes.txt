@@ -9,3 +9,24 @@ chariot
 
 
 Pour les actions du genre 'Ouvrir portail' ; 'Escalader portail' ; etc. voir si c'est compatible avec tous les mots, mais on peut spliter les mots en liste, retirer les 2 dernier caractères et remplacer par 'ez' pour faire une phrase 'Vous ouvrez le portail' par exemple.
+
+
+
+Mes lieux sont des objets
+Ces objets ont plusieurs attributs:
+	- un Titre
+	- une description
+	- des objets
+	- des issues (N, S, O, E)
+
+Exemple d'issue : {
+	"N" : "Voisin"
+}
+
+
+au début je crée tous les lieux puis je les ajoutes à une liste
+Dans la liste je peux boucler par exemple:
+	Pour chaque lieu dans ma liste, si le prochain_lieu.titre = lieu_actuel.issues["N"]
+	alors lieu_actuel = lieu
+
+=> Charger lieu.titre ; lieu.texte ; lieu.objets ; lieu.issues

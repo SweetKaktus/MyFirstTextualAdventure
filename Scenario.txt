@@ -65,3 +65,22 @@ C'est décidez, vous irez chercher ce bras en or quoi qu'il en coûte.
 
 Vous devez préparer d'abord vos affaires...
 Vous devez prendre avec vous de quoi creuser et de quoi emporter le bras
+
+Commandes à taper => 
+	-'Prendre' + Soit pelle, soit pioche pour creuser
+	-'Prendre' + Soit sac, soit chariot, soit brouette
+
+Vous pensez être prêt pour sortir.
+
+Commandes à taper =>
+	- Soit 'Ouvrir Porte'
+	- Soit 'Sortir' + n'importe quoi ou rien
+	- Si autre chose => "Je ne pense pas que ce soit le moment pour ça... ", et au bout de 3 fois, "Je devrais peut être ouvrir la porte et sortir de là..."
+
+	Une fois dehors pour se déplacer :
+	- Est, West
+
+	from Cabane => cabane["est"] = "terrain vague" ; cabane["ouest"] = "voisin"
+
+
+Il va falloir que je prévois des actions et des évents à chaque tableau.
