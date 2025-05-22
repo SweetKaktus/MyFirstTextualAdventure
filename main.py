@@ -12,3 +12,4 @@ def print_letters_slowly(sentence: str):
 		time.sleep(time_between_letters)
 	print()
 
+
