@@ -30,3 +30,9 @@ Dans la liste je peux boucler par exemple:
 	alors lieu_actuel = lieu
 
 => Charger lieu.titre ; lieu.texte ; lieu.objets ; lieu.issues
+
+
+Dans mon workflow, il faudra que je fasse en sorte que les objets soient supprimés des lieux seulement si le joueur les a récupérés.
+Peut être mettre une fonction au chargement de la scène qui vérifie si un des objets de la scène est déjà présent dans les objets du joueur et qui ne les chargent pas dans ce cas.
+
+Il faut que je veille à pouvoir faire plusieurs parties, aussi je ne dois pas toucher aux lieux qui sont dans le json, mais créer des instances temporaires de ces lieux pour les modifier pour la partie / la scène en cours.
