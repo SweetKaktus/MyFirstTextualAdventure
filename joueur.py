@@ -50,10 +50,15 @@ class Joueur:
 			for o in lieu_actuel.objets:
 				if o == objet:
 					self.objets.append(o)
+					self.DB.update({"objets" : self.objets}, self.QUERY_JOUEUR.nom==self.nom)
 					return f"Vous avez pris l'objet : {o}."
 			return "L'objet indiqué n'existe pas."
 		else:
 			return "Vous n'êtes pas dans un lieu connu"
+
+	def mettre_a_jour_le_lieu(self, nouveau_lieu: str):
+		self.lieu = nouveau_lieu
+		return self.DB.update({"lieu" : nouveau_lieu}, self.QUERY_JOUEUR.nom==self.nom)
 
 def get_all_joueurs():
 	all_joueurs = [Joueur(nom=j["nom"], lieu=j["lieu"], objets=j["objets"]) for j in Joueur.DB.all()]

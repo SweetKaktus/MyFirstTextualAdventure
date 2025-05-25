@@ -1,0 +1,47 @@
+#########################
+#                       #
+#       L'HOMME         #
+#     AU BRAS D'OR      #
+#                       #
+#########################
+
+
+-----------------------------------
+
+
+TEXTE D'INTRO (qui s'efface pour laisser place à la scène 1)
+
+
+-----------------------------------
+
+1. Continuer (charge la scène 1 en passant par le titre)
+
+clear()
+-----------------------------------
+
+TEXTE SCENE 1
+
+-----------------------------------
+OBJETS PRESENTS DANS LE LIEU :
+[1] Objet 1
+[2] Objet 2
+
+-----------------------------------
+POSSESSIONS:
+[3] Objet inventaire 1
+[4] Objet inventaire 2
+
+-----------------------------------
+
+
+ACTIONS:
+
+1. PRENDRE
+2. UTILISER UN OBJET DE L'INVENTAIRE
+3. AFFICHER INVENTAIRE
+
+-----------------------------------
+DIRECTIONS:
+
+O. Voisin
+E. Terrain Vague

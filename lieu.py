@@ -31,26 +31,19 @@ class Lieu:
 
 
 	def sauvegarder_lieu(self):
-		# Vérifier si le fichier DB existe
-		# S'il n'existe pas le créer
-		# S'il existe rentrer dans l'algo de sauvegarde:
-			# insérer le dictionnaire des infos dépliées de l'instance de Lieu
-		test_path = self.BASE_DIR / 'datas' / 'lieux.json'
-		try:
-			path_parent = test_path.parent.resolve()
-			path_parent.mkdir()
-		except FileExistsError:
-			print("Le dossier existe, action Path().mkdir() ignorée") # /!\ A CONVERTIR EN DEBUG /!\
-		try:
-			test_path.touch()
-		except FileExistsError:
-			print("Le fichier existe, action Path().touch() ignoréé.") # /!\ A CONVERTIR EN DEBUG /!\
-		self.DB.insert(self.__dict__)
+		# Je vérifie si le lieu existe
+		# S'il nexiste pas je sauvegarde le lieu dans ma TinyDB et retourne sa clé, dans le cas contraire je retourne -1
+		if not self.DB.search(self.QUERY_LIEU.titre==self.titre):
+			return self.DB.insert(self.__dict__)
+		else: return -1
 
 
 	def supprimer_lieu(self):
-		ma_query = Query()
-		self.DB.remove(ma_query.search(titre=self.titre))
+		# Je vérifie si le lieu existe
+		# S'il existe je supprime le lieu de ma TinyDB et je retourne sa clé dans une liste, dans le cas contraire je retourne [-1]
+		if self.DB.search(self.QUERY_LIEU.titre==self.titre):
+			return self.DB.remove(self.QUERY_LIEU.titre==self.titre)
+		else: return [-1]
 
 	def retirer_objet_du_lieu(self, objet: str) -> None:
 		for o in self.objets:

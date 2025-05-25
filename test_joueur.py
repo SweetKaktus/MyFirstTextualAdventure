@@ -1,5 +1,5 @@
 import pytest
-from tinydb import TinyDB
+from tinydb import TinyDB, Query
 from tinydb.storages import MemoryStorage
 
 from joueur import Joueur, get_all_joueurs
@@ -54,6 +54,7 @@ def test_supprimer_joueur_dup(joueur):
 def test_prendre_objet(joueur, lieu):
 	assert joueur.prendre_objet("Mot de passe pour la Wifi") == "Vous avez pris l'objet : Mot de passe pour la Wifi."
 	assert joueur.objets == ["Sandales ouvertes", "Boomerang", "Mot de passe pour la Wifi"]
+	# Je dois faire en sorte de vérifier si en BDD les objets sont bien ajoutés comme il faut. assert joueur.DB.search(Query().nom==joueur.nom)
 
 def test_pas_prendre_objet(joueur, lieu):
 	assert joueur.prendre_objet(" pour la Wifi") == "L'objet indiqué n'existe pas."
@@ -61,3 +62,5 @@ def test_pas_prendre_objet(joueur, lieu):
 def test_prendre_objet_lieu_nok(joueur, lieu_setup_db):
 	assert joueur.prendre_objet("Mot de passe pour la Wifi") == "Vous n'êtes pas dans un lieu connu"
 
+def test_mettre_a_jour_le_lieu(joueur):
+	assert joueur.mettre_a_jour_le_lieu("Plage") == [1]

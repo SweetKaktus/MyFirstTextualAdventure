@@ -27,9 +27,10 @@ Exemple d'issue : {
 au début je crée tous les lieux puis je les ajoutes à une liste
 Dans la liste je peux boucler par exemple:
 	Pour chaque lieu dans ma liste, si le prochain_lieu.titre = lieu_actuel.issues["N"]
-	alors lieu_actuel = lieu
-
-=> Charger lieu.titre ; lieu.texte ; lieu.objets ; lieu.issues
+	alors charger_lieu():
+			lieu_actuel = lieu
+			print(f"Vous êtes dans le lieu : {lieu_actuel.titre}")
+			print(lieu_actuel.texte)
 
 
 Dans mon workflow, il faudra que je fasse en sorte que les objets soient supprimés des lieux seulement si le joueur les a récupérés.
