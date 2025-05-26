@@ -2,10 +2,10 @@ import sys
 
 from joueur import Joueur, get_all_joueurs
 from main import clear, print_letters_slowly
-from joueur import Joueur
+from joueur import Joueur, get_all_joueurs
 
 
-
+all_joueurs = get_all_joueurs()
 
 
 class Menu:
@@ -28,11 +28,16 @@ class Menu:
 			match choix:
 				case "1":
 					nom_joueur = input("Veuillez saisir votre nom ou un pseudonyme :\n")
-					j = Joueur(nom="", lieu="intro", objets=[])
+					j = Joueur(nom=nom_joueur, lieu="intro", objets=[])
 					j.sauvegarder_joueur()
-					demarrer_jeu(j)
+					return j
 				case "2":
-					pass
+					j = self.charger_un_joueur()
+					if not j:
+						choix = ""
+						print("Choix invalide.")
+					else:
+						return j
 				case "3":
 					choix = ""
 					print_letters_slowly("\nBienvenue dans l'histoire de l'Homme au bras d'or.")
@@ -50,10 +55,22 @@ class Menu:
 					print_letters_slowly("Merci d'avoir joué ! À bientôt !")
 					input()
 					clear()
+					sys.exit()
 				case _:
 					print()
 					choix = ""
 					input("Je n'ai pas saisie votre demande.\n")
+
+	def charger_un_joueur(self):
+		for i, j in enumerate(all_joueurs):
+			print(f"{i}. {j}")
+		print()
+		joueur_selectionne = input("Veuillez sélectionner un joueur: ")
+		for i, j in enumerate(all_joueurs):
+			if str(i) == joueur_selectionne:
+				return j
+		return
+
 
 if __name__ == "__main__":
 	m = Menu()

@@ -73,5 +73,4 @@ def get_all_joueurs():
 if __name__ == "__main__":
 	j = Joueur(nom="Nathan", lieu="Piscine", objets=["Maillot de bain", "Serviette"])
 	j.sauvegarder_joueur()
-	print(get_all_joueurs())
-	
+	print(Joueur.DB.search(Joueur.QUERY_JOUEUR.nom == "Jeannot"))

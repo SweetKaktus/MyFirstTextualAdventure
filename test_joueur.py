@@ -52,8 +52,10 @@ def test_supprimer_joueur_dup(joueur):
 	assert joueur.supprimer_joueur() == [-1]
 
 def test_prendre_objet(joueur, lieu):
+	joueur_query = Query()
 	assert joueur.prendre_objet("Mot de passe pour la Wifi") == "Vous avez pris l'objet : Mot de passe pour la Wifi."
 	assert joueur.objets == ["Sandales ouvertes", "Boomerang", "Mot de passe pour la Wifi"]
+	# assert Joueur.DB.search((joueur.QUERY_JOUEUR.name == "Jeannot")) == [{'nom': 'Jeannot', 'lieu': 'Camping', 'objets': ['Sandales ouvertes', 'Boomerang', 'Mot de passe pour la Wifi']}]
 	# Je dois faire en sorte de vérifier si en BDD les objets sont bien ajoutés comme il faut. assert joueur.DB.search(Query().nom==joueur.nom)
 
 def test_pas_prendre_objet(joueur, lieu):

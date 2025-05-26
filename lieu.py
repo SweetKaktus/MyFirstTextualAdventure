@@ -21,13 +21,21 @@ class Lieu:
 	QUERY_LIEU = Query()
 
 	def __init__(self, titre: str, textes: dict, objets: list, issues: dict):
-		self.titre = titre
+		self.titre = titre.lower()
 		self.textes = textes
 		self.objets = objets
 		self.issues = issues
+		for o in self.objets:
+			o = o.lower()
+		for k, v in self.issues.items():
+			k = k.lower()
+			v = v.lower()
+		for k, v in self.textes.items():
+			k = k.lower()
+			v = v.lower()
 
 	def __repr__(self):
-		return f"Lieu(titre={self.titre})"
+		return f"Lieu(titre={self.titre.title()})"
 
 
 	def sauvegarder_lieu(self):
@@ -63,7 +71,7 @@ def get_all_lieux() -> list:
 if __name__ == "__main__":
 	l = Lieu(
 			titre="Camping", 
-			textes={"default": "Vous êtes au camping municipal de la Motte Chalancon"},
+			textes={"defaut": "Vous êtes au camping municipal de la Motte Chalancon"},
 			objets=["Mot de passe pour la Wifi", "Coupon pour les entrées à la piscine"], 
 			issues={"N": "Village", "S": "Montagne", "E": "Piscine"}
 		)
