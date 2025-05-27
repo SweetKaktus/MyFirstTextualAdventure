@@ -21,12 +21,12 @@ class Lieu:
 	QUERY_LIEU = Query()
 
 	def __init__(self, titre: str, textes: dict, objets: list, issues: dict):
-		self.titre = titre.lower()
-		self.textes = textes
-		self.objets = objets
-		self.issues = issues
+		self.titre: str = titre.lower()
+		self.textes: dict = textes
+		self.objets: list = objets
+		self.issues: dict = issues
 		for o in self.objets:
-			o = o.lower()
+				o = o.lower()
 		for k, v in self.issues.items():
 			k = k.lower()
 			v = v.lower()

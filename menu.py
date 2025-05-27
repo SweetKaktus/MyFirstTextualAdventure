@@ -38,6 +38,7 @@ class Menu:
 						print("Choix invalide.")
 					else:
 						return j
+						break
 				case "3":
 					choix = ""
 					print_letters_slowly("\nBienvenue dans l'histoire de l'Homme au bras d'or.")
