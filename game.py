@@ -9,23 +9,27 @@ import os
 
 from lieu import Lieu, get_all_lieux
 from joueur import Joueur, get_all_joueurs
+from functions_for_display import time_sleep_between_lines, print_letters_slowly, clear, print_letters_slowly_for_game_instructions
 from menu import Menu
 
-time_between_lines = 2
-time_between_letters = 0.05
+# time_between_lines = 0.5
+# time_between_letters = 0.05
 
-def print_letters_slowly(sentence: str):
-	for character in sentence:
-		sys.stdout.write(character)
-		sys.stdout.flush()
-		time.sleep(time_between_letters)
-	print()
+# def time_sleep_between_lines():
+# 	time.sleep(time_between_lines)
 
-def clear():
-	if os.name == "nt":
-		os.system("cls")
-	else:
-		os.system("clear")
+# def print_letters_slowly(sentence: str):
+# 	for character in sentence:
+# 		sys.stdout.write(character)
+# 		sys.stdout.flush()
+# 		time.sleep(time_between_letters)
+# 	print()
+
+# def clear():
+# 	if os.name == "nt":
+# 		os.system("cls")
+# 	else:
+# 		os.system("clear")
 
 lieu_intro: Lieu 
 joueur_dummy = ""
@@ -97,7 +101,8 @@ class Game:
 			if o == objet:
 				self.l_a.objets.remove(objet)
 				self.j.objets.append(objet)
-				input(f'Vous vous saisissez de "{objet}"')
+				print_letters_slowly_for_game_instructions(f'Vous vous saisissez de "{objet}"')
+				input('Appuyez sur "Entrée" pour continuer.')
 
 
 	def charger_scene(self):
@@ -108,16 +113,16 @@ class Game:
 			for ob in self.l_a.objets:
 				if o == ob:
 					self.l_a.objets.remove(o)
-		clear()
 		while not choix:
+			clear()
 			compteur_objets = 0
 			print(("-" * 20) + "\n")
 			print(f"LIEU ACTUEL : {self.l_a.titre.title()}\n")
 			print(("-" * 20) + "\n")
-
+			time_sleep_between_lines()
 			print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
 			print(("-" * 20) + "\n")
-
+			time_sleep_between_lines()
 			print("OBJETS PRESENTS DANS LE LIEU:\n")
 			for i, o in enumerate(self.l_a.objets, start=1):
 				print(f"[{i}] {o}")
@@ -129,12 +134,12 @@ class Game:
 			print()
 
 			print(("-" * 20) + "\n")
-
+			time_sleep_between_lines()
 			print("ISSUES POSSIBLES:\n")
 			for k, v in self.l_a.issues.items():
 				print(f"{k} : {v}")
 			print(("-" * 20) + "\n")
-
+			time_sleep_between_lines()
 			print("ACTIONS POSSIBLES:\n[1] PRENDRE UN OBJET\n[2] ALLER DANS UNE DIRECTION (N/S/E/O)\n[9] QUITTER LE JEU")
 			choix = input("> ")
 			match choix:
@@ -154,7 +159,7 @@ class Game:
 
 				case "2":
 					print("ALLER DANS UNE DIRECTION\n")
-					print("# Veuillez indiquer la direction à prendre (N/S/E/O): ")
+					print("Veuillez indiquer la direction à prendre (N/S/E/O): ")
 					d = input("> ")
 					new_lieu = self.choisir_une_direction(direction=d)
 					if new_lieu:
@@ -164,8 +169,8 @@ class Game:
 				case "9":
 					self.j.mettre_a_jour_le_lieu(nouveau_lieu=self.j.lieu)
 					self.j.mettre_a_jour_les_objets(objets=self.j.objets)
-					print_letters_slowly("Votre progression a été sauvegardée...\n")
-					print_letters_slowly("Merci d'avoir joué ! A bientôt !")
+					print_letters_slowly_for_game_instructions("Votre progression a été sauvegardée...\n")
+					print_letters_slowly_for_game_instructions("Merci d'avoir joué ! A bientôt !")
 					input()
 					clear()
 					sys.exit()
