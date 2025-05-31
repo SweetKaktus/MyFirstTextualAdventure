@@ -12,25 +12,6 @@ from joueur import Joueur, get_all_joueurs
 from functions_for_display import time_sleep_between_lines, print_letters_slowly, clear, print_letters_slowly_for_game_instructions
 from menu import Menu
 
-# time_between_lines = 0.5
-# time_between_letters = 0.05
-
-# def time_sleep_between_lines():
-# 	time.sleep(time_between_lines)
-
-# def print_letters_slowly(sentence: str):
-# 	for character in sentence:
-# 		sys.stdout.write(character)
-# 		sys.stdout.flush()
-# 		time.sleep(time_between_letters)
-# 	print()
-
-# def clear():
-# 	if os.name == "nt":
-# 		os.system("cls")
-# 	else:
-# 		os.system("clear")
-
 lieu_intro: Lieu 
 joueur_dummy = ""
 
@@ -51,6 +32,10 @@ class Game:
 		self.l_a: Lieu = lieu_actuel
 		self.m: Menu = menu
 		self.demarrer_jeu()
+		self.issues_disponibles = {}
+		self.cle_objets = ""
+
+
 
 	def afficher_texte_lieu_actuel(self):
 		for k, v in self.l_a.textes.items():
@@ -73,6 +58,22 @@ class Game:
 		# input('Appuyez sur "Entrée" pour continuer\n')
 		# self.choisir_une_direction(direction="N") # PREVOIR DANS MON LIEU INTRO UNE ISSUE VERS L'AUBERGE POUR ASSURER LE BON DEMARRAGE DU JEU
 
+	def charger_issues_disponibles(self):
+		for obj in self.j.objets:
+			if obj.lower() in self.l_a.issues.keys():
+				self.issues_disponibles = self.l_a.issues[obj.lower()]
+				return
+		self.issues_disponibles = self.l_a.issues["defaut"]
+		return
+
+	def charger_cle_objets(self):
+		for obj in self.j.objets:
+			if obj.lower() in self.l_a.objets.keys():
+				self.cle_objets = obj.lower()
+				return
+		self.cle_objets = "defaut"
+		return
+
 	def choisir_une_direction(self, direction: str): # J'AI UN PB AVEC CETTE FONCTION, CELA NE CHOISIT PAS LA DIRECTION
 		d = direction.lower()
 		# print(d)
@@ -80,10 +81,13 @@ class Game:
 			for l in all_lieux:
 				# print(l.titre)
 				# print(self.l_a.issues[direction])
-				if l.titre == self.l_a.issues[direction].lower():
+				try:
+					l.titre == self.issues_disponibles[d].lower()
 					# print(self.l_a.issues[direction])
+					print(f"Vous vous dirigez vers {self.issues_disponibles[d].capitalize()}")
+					input()
 					return l
-				else:
+				except KeyError:
 					print(f"Il n'y a pas de chemin vers {d.title()}")
 					input()
 					return
@@ -97,22 +101,33 @@ class Game:
 			return
 
 	def prendre_un_objet(self, objet):
-		for o in self.l_a.objets:
-			if o == objet:
-				self.l_a.objets.remove(objet)
+		# print(self.objets_disponibles)
+		# input()
+		for o in self.l_a.objets[self.cle_objets]:
+			# print(o)
+			# input()
+			# print(objet.lower())
+			if o.lower() == objet.lower():
+				# print("YAY")
+				# input()
+				self.l_a.objets[self.cle_objets].remove(objet.lower())
 				self.j.objets.append(objet)
-				print_letters_slowly_for_game_instructions(f'Vous vous saisissez de "{objet}"')
+				print_letters_slowly_for_game_instructions(f'Vous vous saisissez de "{objet.capitalize()}"')
 				input('Appuyez sur "Entrée" pour continuer.')
 
 
 	def charger_scene(self):
 		choix = ""
-		self.l_a.objets.sort()
+		self.charger_issues_disponibles()
+		self.charger_cle_objets()
+		self.l_a.objets[self.cle_objets].sort()
 		self.j.objets.sort()
 		for o in self.j.objets:
-			for ob in self.l_a.objets:
+			for ob in self.l_a.objets[self.cle_objets]:
 				if o == ob:
-					self.l_a.objets.remove(o)
+					self.l_a.objets[self.cle_objets].remove(o)
+		self.charger_cle_objets()
+
 		while not choix:
 			clear()
 			compteur_objets = 0
@@ -123,24 +138,26 @@ class Game:
 			print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
 			print(("-" * 20) + "\n")
 			time_sleep_between_lines()
-			print("OBJETS PRESENTS DANS LE LIEU:\n")
-			for i, o in enumerate(self.l_a.objets, start=1):
-				print(f"[{i}] {o}")
+			print("OBJETS PRESENTS DANS LE LIEU:\n") # JE DOIS REFACTO MON AFFICHAGE D'OBJETS POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+			# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+			for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
+				print(f"[{i}] {o.capitalize()}")
 				compteur_objets = i
 
 			print("\nVOS POSSESSIONS:\n")
 			for i, o in enumerate(self.j.objets, start=compteur_objets+1):
-				print(f"[{i}] {o}")
+				print(f"[{i}] {o.capitalize()}")
 			print()
 
 			print(("-" * 20) + "\n")
 			time_sleep_between_lines()
-			print("ISSUES POSSIBLES:\n")
-			for k, v in self.l_a.issues.items():
-				print(f"{k} : {v}")
+			print("ISSUES POSSIBLES:\n") # JE DOIS REFACTO MON AFFICHAGE D'ISSUES POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+			# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+			for k, v in self.issues_disponibles.items():
+				print(f"{k.title()} : {v.title()}")
 			print(("-" * 20) + "\n")
 			time_sleep_between_lines()
-			print("ACTIONS POSSIBLES:\n[1] PRENDRE UN OBJET\n[2] ALLER DANS UNE DIRECTION (N/S/E/O)\n[9] QUITTER LE JEU")
+			print("ACTIONS POSSIBLES:\n[1] PRENDRE UN OBJET\n[2] ALLER DANS UNE DIRECTION (N/S/E/O)\n[0] QUITTER LE JEU")
 			choix = input("> ")
 			match choix:
 				case "1":
@@ -148,7 +165,7 @@ class Game:
 					print("Veuillez indiquer l'objet à saisir (nombre affiché entre crochets) : ")
 					o_index = input("> ")
 					o_take = False
-					for i, o in enumerate(self.l_a.objets, start=1):
+					for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
 						if str(i) == o_index:
 							o_take = True
 							self.prendre_un_objet(o)
@@ -166,7 +183,7 @@ class Game:
 						self.l_a = new_lieu
 						self.j.mettre_a_jour_le_lieu(new_lieu.titre)
 
-				case "9":
+				case "0":
 					self.j.mettre_a_jour_le_lieu(nouveau_lieu=self.j.lieu)
 					self.j.mettre_a_jour_les_objets(objets=self.j.objets)
 					print_letters_slowly_for_game_instructions("Votre progression a été sauvegardée...\n")

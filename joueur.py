@@ -23,6 +23,9 @@ class Joueur:
 		self.nom = nom
 		self.lieu = lieu
 		self.objets = objets
+		for o in self.objets:
+			o = o.lower()
+
 
 	def __str__(self):
 		return self.nom
@@ -49,8 +52,8 @@ class Joueur:
 		if lieu_actuel:
 			for o in lieu_actuel.objets:
 				if o == objet:
-					self.objets.append(o)
-					return f"Vous avez pris l'objet : {o}."
+					self.objets.append(o.lower())
+					return f"Vous avez pris l'objet : {o.title()}."
 			return "L'objet indiqué n'existe pas."
 		else:
 			return "Vous n'êtes pas dans un lieu connu"

@@ -27,9 +27,11 @@ class Lieu:
 		self.issues: dict = issues
 		for o in self.objets:
 				o = o.lower()
-		for k, v in self.issues.items():
+		for k in self.issues.keys():
 			k = k.lower()
-			v = v.lower()
+			for ke, i in self.issues[k].items():
+				ke = ke.lower()
+				i = i.lower()
 		for k, v in self.textes.items():
 			k = k.lower()
 			v = v.lower()
@@ -73,7 +75,7 @@ if __name__ == "__main__":
 			titre="Camping", 
 			textes={"defaut": "Vous êtes au camping municipal de la Motte Chalancon"},
 			objets=["Mot de passe pour la Wifi", "Coupon pour les entrées à la piscine"], 
-			issues={"N": "Village", "S": "Montagne", "E": "Piscine"}
+			issues={"defaut" : {"N": "Village", "S": "Montagne"}, "Coupon pour les entrées à la piscine" : {"N": "Village", "S": "Montagne", "E": "Piscine"}}
 		)
 	l.sauvegarder_lieu()
 

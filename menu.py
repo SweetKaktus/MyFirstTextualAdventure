@@ -5,7 +5,6 @@ from functions_for_display import print_letters_slowly, clear, time_sleep_betwee
 from joueur import Joueur, get_all_joueurs
 
 
-# all_joueurs = get_all_joueurs()
 
 
 class Menu:

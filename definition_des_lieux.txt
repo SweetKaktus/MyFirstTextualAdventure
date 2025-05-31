@@ -1,0 +1,51 @@
+Nom du jeu: L'homme au bras d'or...
+
+LIEU : COMMENCEMENT
+
+Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
+
+Nous sommes en 1956, et vous avez ouïe dire qu'un américain, vétéran de la seconde guerre était passé il y a peu.
+Ce vétéran se distinguait facilement, car il avait perdu son bras à cause d'un tir d'obus sur le front, après quoi il a été rapatrié aux États-Unis.
+
+Quelques temps après, il héritait d'une grande fortune, il décida par ce biais de remplacer son bras. Il aurait à la place bras en or massif. Il demanda les meilleurs médecins pour s'occuper de son cas. Alors ces derniers se mirent sur le coup afin de lui greffer bras en or.
+
+Cet homme, l'homme au bras d'or était donc de passage pour se rendre à Munich. Il avait pu venir à bord de sa belle voiture, une cadillac rouge décapotable. Tandis qu'il parcourait ces longues routes désertes tout en faisant rugir son moteur, si vite dans une forêt si sombre qu'elle ne laissait pas passer un seul rayon du Soleil il ne vit malheureusement pas ce virage... un virage à 180 degrés en tête d'épingle... 
+
+*BOOM* *CRACK* *VLAN*
+
+Il succomba à ses blessures dans un accident tragique.
+
+Ce genre d'accident arrivait si souvent au niveau de ce virage, qu'un cimetière avait finit par être construit non loin.
+C'est là bas qu'on l'y avait enterré... avec son bras en or.
+
+Une idée vous traverse alors l'esprit... ce bras en or ne manquera à personne après tout, et si je ne trouve pas une solution, je finirai comme lui avant le prochain printemps.
+
+C'est décidez, vous irez chercher ce bras en or quoi qu'il en coûte.
+
+Vous devez préparer d'abord vos affaires...
+Vous devez prendre avec vous de quoi creuser et de quoi emporter le bras
+
+
+OBJETS => []
+ISSUES => N : AUBERGE
+
+==================================================================================================================
+
+LIEU : AUBERGE
+
+TEXTE DEFAUT : 
+Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tombe et emporter le bras en or massif...
+
+TEXTE CLÉ AUBERGE + PELLE => 
+
+OBJETS => []
+ISSUES DEFAUT => S : CAVE (PELLE a récupérer); E : CHAMBRE A L'ETAGE (CLÉ AUBERGE à récupérer) 
+ISSUES CLÉ AUBERGE + PELLE => S : CAVE ; E : CHAMBRE A L'ETAGE ; N : EXTERIEUR DE L'AUBERGE
+
+==================================================================================================================
+
+
+LIEU : CAVE
+
+TEXTE DEFAUT : 
+

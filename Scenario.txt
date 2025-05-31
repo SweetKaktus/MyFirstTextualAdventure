@@ -43,6 +43,8 @@ Go Cabane => Vous vous approchez de la cabane
 
 L'homme au bras d'or...
 
+LIEU : COMMENCEMENT
+
 Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
 
 Nous sommes en 1956, et vous avez ouïe dire qu'un américain, vétéran de la seconde guerre était passé il y a peu.

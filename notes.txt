@@ -36,4 +36,11 @@ Dans la liste je peux boucler par exemple:
 Dans mon workflow, il faudra que je fasse en sorte que les objets soient supprimés des lieux seulement si le joueur les a récupérés.
 Peut être mettre une fonction au chargement de la scène qui vérifie si un des objets de la scène est déjà présent dans les objets du joueur et qui ne les chargent pas dans ce cas.
 
-Il faut que je veille à pouvoir faire plusieurs parties, aussi je ne dois pas toucher aux lieux qui sont dans le json, mais créer des instances temporaires de ces lieux pour les modifier pour la partie / la scène en cours.
+Il faut que je veille à pouvoir faire plusieurs parties, aussi je ne dois pas toucher aux lieux qui sont dans le json, mais créer des instances temporaires de ces lieux pour les modifier pour la partie / la scène en cours
+
+
+En terme de structure je risque d'être coincé concernant la mise à disposition des objets ou des sorties, à la manière des textes il me faudrait une structure avec une liste d'issue si l'on ne possède aucun objet adéquat, et une liste d'issues si l'on possède l'objet adéquat avec des issues supplémentaires. (idem pour la mise à disposition des objets).
+
+
+
+Le nom de mes lieux doivent avoir un article (genre "La maison du voisin") avec le "La" devant pour s'associer à la phrase de feedback pour l'action "Choisir une direction" dans l'objet "Game".
