@@ -1,4 +1,4 @@
-# MyFirstTextualAdventure
+# MyFirstTextualAdventure - L'Homme au bras d'Or
 
 ![Work in Progress](https://img.shields.io/badge/status-work%20in%20progress-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
