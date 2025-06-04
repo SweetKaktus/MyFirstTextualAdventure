@@ -1,4 +1,4 @@
-# MyFirstTextualAdventure
+# MyFirstTextualAdventure - L'Homme au bras d'Or
 
 Jeu d’aventure textuel écrit en Python, conçu pour m’entraîner à la programmation orientée objet et à la structuration d’un projet.
 
