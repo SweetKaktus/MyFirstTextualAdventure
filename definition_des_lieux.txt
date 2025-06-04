@@ -1,6 +1,6 @@
 Nom du jeu: L'homme au bras d'or...
 
-LIEU : COMMENCEMENT
+LIEU : INTRODUCTION
 
 Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
 
@@ -23,29 +23,209 @@ Une idée vous traverse alors l'esprit... ce bras en or ne manquera à personne 
 C'est décidez, vous irez chercher ce bras en or quoi qu'il en coûte.
 
 Vous devez préparer d'abord vos affaires...
-Vous devez prendre avec vous de quoi creuser et de quoi emporter le bras
+Vous devez prendre avec vous de quoi creuser pour parvenir à récupérer le bras.
 
 
 OBJETS => []
+
 ISSUES => N : AUBERGE
 
-==================================================================================================================
+
+===============================================================================================================
+
 
 LIEU : AUBERGE
 
 TEXTE DEFAUT : 
 Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tombe et emporter le bras en or massif...
 
-TEXTE CLÉ AUBERGE + PELLE => 
+TEXTE CLÉ AUBERGE + PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
+
+TEXTE BRAS D'OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : "QUI A VOLÉ MON BRAS D'OR !". Votre sang ne fait qu'un tour, et quand vous regardez à travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus.
 
 OBJETS => []
-ISSUES DEFAUT => S : CAVE (PELLE a récupérer); E : CHAMBRE A L'ETAGE (CLÉ AUBERGE à récupérer) 
+
+ISSUES DEFAUT => S : CAVE DE L'AUBERGE (PELLE a récupérer); E : CHAMBRE A L'ETAGE (CLÉ AUBERGE à récupérer) 
+
 ISSUES CLÉ AUBERGE + PELLE => S : CAVE ; E : CHAMBRE A L'ETAGE ; N : EXTERIEUR DE L'AUBERGE
 
-==================================================================================================================
+
+===============================================================================================================
 
 
-LIEU : CAVE
+LIEU : CAVE DE L'AUBERGE
+
+TEXTE DEFAUT : 
+Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boissons que vous servez... malgré les années, quand vous pénetrez dans cette pièce, un frisson vous parcourt l'échine.
+
+
+TEXTE PELLE : Vous avez récupéré votre pelle, il vous tarde de sortir de cette pièce.
+
+TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre "QUI A VOLÉ MON BRAS D'OR !" . . . Cachez vous !
+
+OBJETS DEFAUT : PELLE
+
+ISSUES DEFAUT : AUBERGE
+
+ISSUES BRAS D'OR : SOUS UN BANC ; DANS UNE CAISSE ; DANS UNE ARMOIRE
+
+
+===============================================================================================================
+
+
+LIEU : CHAMBRE A L'ETAGE
+
+TEXTE DEFAUT : Votre chambre vous rassure, il vous plaît de lire des livres fantastiques le soir avant de dormir.
+
+TEXTE CLE DE L'AUBERGE : Ah vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.
+
+TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre "QUI A VOLÉ MON BRAS D'OR !" . . . Cachez vous !
+
+OBJETS DEFAUT : CLE
+
+ISSUES DEFAUT : AUBERGE
+
+ISSUES BRAS D'OR : E : Dans votre lit sous vos draps ; S : Derrière le rideau
+
+
+===============================================================================================================
+
+
+LIEU : SOUS UN BANC
+
+TEXTE DEFAUT : Vous vous cachez sous le banc, dos à la porte de la cave, le bras en or serré contre vous. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : "qui a volé mon bras d'or . . ."
+
+C'EST TOI !
+
+*visage*
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : N : Epilogue
+
+
+===============================================================================================================
+
+
+LIEU : DANS UNE CAISSE
+
+TEXTE DEFAUT :
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : N : Epilogue
+
+
+===============================================================================================================
+
+
+LIEU : DANS UNE ARMOIRE
+
+TEXTE DEFAUT :
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : N : Epilogue
+
+
+===============================================================================================================
+
+
+LIEU : SOUS LE LIT
+
+TEXTE DEFAUT :
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : N : Epilogue
+
+
+===============================================================================================================
+
+
+LIEU : DERRIERE LE RIDEAU
+
+TEXTE DEFAUT :
+
+TEXTE BRAS D'OR :
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : N : Epilogue
+
+
+===============================================================================================================
+
+
+LIEU : EXTERIEUR DE L'AUBERGE
+
+TEXTE DEFAUT :
+
+TEXTE BRAS D'OR : 
+
+OBJETS DEFAUT : []
+
+ISSUES DEFAUT : 
+
+ISSUES BRAS D'OR : 
+
+
+===============================================================================================================
+
+
+LIEU : GARAGISTE
+
+TEXTE DEFAUT :
+
+TEXTE BARRE A MINE :
+
+TEXTE BRAS D'OR : 
+
+OBJETS DEFAUT : BARRE A MINE
+
+ISSUES DEFAUT : 
+
+(ISSUES BRAS D'OR : N : Epilogue)
+
+
+===============================================================================================================
+
+
+LIEU : CABANE DU GARDIEN DU CIMETIERE
 
 TEXTE DEFAUT : 
 
+TEXTE BARRE A MINE : 
+
+TEXTE BRAS D'OR : 
+
+OBJETS DEFAUT : []
+
+OBJETS BARRE A MINE : CLE DU CIMETIERE
+
+ISSUES DEFAUT : 
+
+ISSUES BRAS D'OR : 
+
+
+===============================================================================================================
+
+
+LIEU : CIMETIERE
+
+TEXTE DEFAUT :
+
+TEXTE CLE DU CIMETIERE : 
+
+TEXTE BRAS D'OR : 
+
+OBJETS DEFAUT : []
+
+OBJETS CLE DU CIMETIERE : 
+
+ISSUES DEFAUT : 
+
+ISSUES BRAS D'OR : 
+
+
+===============================================================================================================
