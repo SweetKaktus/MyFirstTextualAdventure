@@ -2,7 +2,6 @@
 
 ![Work in Progress](https://img.shields.io/badge/status-work%20in%20progress-yellow.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
-![Licence CC0 1.0 Universal](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
 Jeu d'aventure textuel développé en Python, conçu pour mettre en pratique la programmation orientée objet, les structures de données et la logique de navigation dans un univers narratif.
 
