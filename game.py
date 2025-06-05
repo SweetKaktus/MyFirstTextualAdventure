@@ -25,6 +25,8 @@ for j in get_all_joueurs():
 	if j.nom == "dummy":
 		joueur_dummy = j
 
+visage = "    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     "
+
 
 class Game:
 	def __init__(self, lieu_actuel: Lieu=lieu_intro, joueur: Joueur=joueur_dummy, menu: Menu=Menu()):
@@ -204,3 +206,6 @@ if __name__ == "__main__":
 	g = Game()
 	while True:
 		g.charger_scene()
+
+	# print(visage)
+	# input()

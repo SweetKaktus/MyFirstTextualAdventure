@@ -1,5 +1,9 @@
 Nom du jeu: L'homme au bras d'or...
 
+
+===============================================================================================================
+
+
 LIEU : INTRODUCTION
 
 Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
@@ -41,7 +45,9 @@ Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tomb
 
 TEXTE CLÉ AUBERGE + PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
 
-TEXTE BRAS D'OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : "QUI A VOLÉ MON BRAS D'OR !". Votre sang ne fait qu'un tour, et quand vous regardez à travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus.
+TEXTE BRAS D'OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : 
+"!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!". 
+Votre sang ne fait qu'un tour, et quand vous regardez à travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus.
 
 OBJETS => []
 
@@ -49,6 +55,7 @@ ISSUES DEFAUT => S : CAVE DE L'AUBERGE (PELLE a récupérer); E : CHAMBRE A L'ET
 
 ISSUES CLÉ AUBERGE + PELLE => S : CAVE ; E : CHAMBRE A L'ETAGE ; N : EXTERIEUR DE L'AUBERGE
 
+ISSUES BRAS EN OR : S : CAVE ; E : CHAMBRE
 
 ===============================================================================================================
 
@@ -61,7 +68,8 @@ Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boiss
 
 TEXTE PELLE : Vous avez récupéré votre pelle, il vous tarde de sortir de cette pièce.
 
-TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre "QUI A VOLÉ MON BRAS D'OR !" . . . Cachez vous !
+TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
+"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !
 
 OBJETS DEFAUT : PELLE
 
@@ -79,7 +87,8 @@ TEXTE DEFAUT : Votre chambre vous rassure, il vous plaît de lire des livres fan
 
 TEXTE CLE DE L'AUBERGE : Ah vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.
 
-TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre "QUI A VOLÉ MON BRAS D'OR !" . . . Cachez vous !
+TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
+"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !
 
 OBJETS DEFAUT : CLE
 
@@ -93,11 +102,12 @@ ISSUES BRAS D'OR : E : Dans votre lit sous vos draps ; S : Derrière le rideau
 
 LIEU : SOUS UN BANC
 
-TEXTE DEFAUT : Vous vous cachez sous le banc, dos à la porte de la cave, le bras en or serré contre vous. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : "qui a volé mon bras d'or . . ."
+TEXTE DEFAUT : Vous vous cachez sous le banc, dos à la porte de la cave, le bras en or serré contre vous. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : 
+". . .  q u i  a  v o l é  m o n  b r a s  d ' o r  . . ."
 
-C'EST TOI !
+!!! C'EST TOI !!!
 
-*visage*
+{{ visage }}
 
 OBJETS DEFAUT : []
 
@@ -109,7 +119,12 @@ ISSUES DEFAUT : N : Epilogue
 
 LIEU : DANS UNE CAISSE
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : Vous ouvrez la caisse, vous pliez en deux pour entrer dedans, le bras en or serré contre votre poitrine. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : 
+". . .  q u i  a  v o l é  m o n  b r a s  d ' o r  . . ."
+
+!!! C'EST TOI !!!
+
+{{ visage }}
 
 OBJETS DEFAUT : []
 
@@ -121,7 +136,12 @@ ISSUES DEFAUT : N : Epilogue
 
 LIEU : DANS UNE ARMOIRE
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : L'amoire est assez grande pour vous accueillir, vous et le bras en or que vous tenez fermemant dans vos bras. Vous entrez dedans puis observez via l'interstice ce qu'il se trame... mais de ne voyez rien. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : 
+". . .  q u i  a  v o l é  m o n  b r a s  d ' o r  . . ."
+
+!!! C'EST TOI !!!
+
+{{ visage }}
 
 OBJETS DEFAUT : []
 
@@ -131,9 +151,14 @@ ISSUES DEFAUT : N : Epilogue
 ===============================================================================================================
 
 
-LIEU : SOUS LE LIT
+LIEU : SOUS LA COUETTE DANS VOTRE LIT
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : Vous sautez dans votre lit et vous recroquevillez sous la couette, le bras en or serré contre votre poitrine. Vous priez pour que cela ne soit qu'un mauvais rêve ou un mirage... Vous haletez lorsque vous entendez des pas monter les escaliers... la porte de votre chambre grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : 
+". . .  q u i  a  v o l é  m o n  b r a s  d ' o r  . . ."
+
+!!! C'EST TOI !!!
+
+{{ visage }}
 
 OBJETS DEFAUT : []
 
@@ -145,9 +170,12 @@ ISSUES DEFAUT : N : Epilogue
 
 LIEU : DERRIERE LE RIDEAU
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : Vous vous faufilez derrière le rideau et serrez le bras en or contre vous afin qu'il ne dépasse pas... Vous haletez lorsque vous entendez des pas monter les escaliers... la porte de votre chambre grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : 
+". . .  q u i  a  v o l é  m o n  b r a s  d ' o r  . . ."
 
-TEXTE BRAS D'OR :
+!!! C'EST TOI !!!
+
+{{ visage }}
 
 OBJETS DEFAUT : []
 
@@ -159,15 +187,16 @@ ISSUES DEFAUT : N : Epilogue
 
 LIEU : EXTERIEUR DE L'AUBERGE
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : "La température est glaciale cette nuit... au moins je ne risque pas de croiser grand monde."
 
-TEXTE BRAS D'OR : 
+TEXTE BRAS D'OR : Tout en courant vous apercevez enfin le pas de votre porte ! Les pas que vous entendez derrière vous vous cadencent toujours. À nouveau un frisson vous parcours l'échine et vous entendez :
+"! Q U I  A  V O L É  M O N  B R A S  D ' O R  !"
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : 
+ISSUES DEFAUT : S : Auberge ; O : Cabane du gardien ; E : Garagiste ; 
 
-ISSUES BRAS D'OR : 
+ISSUES BRAS D'OR : S : Auberge
 
 
 ===============================================================================================================
@@ -175,15 +204,15 @@ ISSUES BRAS D'OR :
 
 LIEU : GARAGISTE
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : L'établissement de Bruno le garagiste. Avec tous ces accidents c'est lui qui récupère les carcasses des voitures... ce vieux bougre profite clairement de la situation...
 
-TEXTE BARRE A MINE :
+TEXTE BARRE A MINE : Je rendrai cette barre à mine à Bruno plus tard. Elle pourrait me servir si quelque chose me barre la route.
 
-TEXTE BRAS D'OR : 
+(TEXTE BRAS D'OR : )
 
 OBJETS DEFAUT : BARRE A MINE
 
-ISSUES DEFAUT : 
+ISSUES DEFAUT : O : Auberge
 
 (ISSUES BRAS D'OR : N : Epilogue)
 
@@ -193,19 +222,35 @@ ISSUES DEFAUT :
 
 LIEU : CABANE DU GARDIEN DU CIMETIERE
 
-TEXTE DEFAUT : 
+TEXTE DEFAUT : Roger le gardien habite ici. Un homme très solitaire, il est à l'opposé de ce que je suis. Moi il me faut du monde de la vie et de l'épicurisme !
 
-TEXTE BARRE A MINE : 
+Bon soyons méthodiques, où se trouve la clé du cimetière... je crois l'avoir déjà vu la poser dans son abri de jardin, je vais devoir le forcer... mais comment ?
 
-TEXTE BRAS D'OR : 
+TEXTE BARRE A MINE : Roger le gardien habite ici. Un homme très solitaire, il est à l'opposé de ce que je suis. Moi il me faut du monde de la vie et de l'épicurisme !
+
+Avec cette barre à mine je vais pouvoir forcer son abri de jardin.
+
+* CRRAAAAK *
+
+Bingo ! La clé est maintenant à portée de main !
+
+
+Texte CLE DU CIMETIERE : Merci Roger ! Je te la rendrai dès que j'en aurai fini avec cette histoire...
+
+TEXTE BRAS D'OR : Tandis que vous approchez de la cabane du gardien, vous entendez le verrou du portail qui s'enclenche... la porte grince, puis vous l'entendez claquer. Vous entendez des bruits de pas qui vous cadencent, vous accélérez, les pas s'accélèrent également. Un frisson vous parcours l'échine et vous entendez gronder :
+"Q U I  A  V O L É  M O N  B R A S  D ' O R"
+
+Vous êtes suivi !
+
+!!! COUREZ !!!
 
 OBJETS DEFAUT : []
 
 OBJETS BARRE A MINE : CLE DU CIMETIERE
 
-ISSUES DEFAUT : 
+ISSUES DEFAUT : N : Cimetière ; E : Extérieur de l'auberge
 
-ISSUES BRAS D'OR : 
+ISSUES BRAS D'OR : E : Extérieur de l'auberge
 
 
 ===============================================================================================================
@@ -213,19 +258,39 @@ ISSUES BRAS D'OR :
 
 LIEU : CIMETIERE
 
-TEXTE DEFAUT :
+TEXTE DEFAUT : Le cimetière... ça m'fou les j'tons d'être là à cette heure-ci... mais bon, si je veux passer l'hiver je n'ai pas le choix.
 
-TEXTE CLE DU CIMETIERE : 
+*CLINK* *CLONK*
 
-TEXTE BRAS D'OR : 
+Fermé. Il va me falloir la clé...
+
+TEXTE CLE DU CIMETIERE : Vous ouvrez la porte. Cette dernière manquant d'huile elle grince terriblement fort, vous espérez fortement que le gardien n'ait rien entendu...
+
+Vous marchez pas à pas dans l'allée du cimetière à la recherche du nom du défunt au bras d'or.
+
+[NOM 1 - EPITAPHE] Commentaire ...
+
+[NOM 2 - EPITAPHE] Commentaire ... 
+
+Vous continuez à parcourir l'allée, arrivé vers le fond du cimetière vous son nom ... "" - EPITAPHE...
+
+Il est temps de se mettre à creuser. Votre coeur bat la chamade, vous savez pertinemment que vous ne devriez pas faire cela. Mais après tout il faut bien qu'un tel ouvrage serve à quelqu'un.
+
+TEXTE BRAS D'OR : Vous avez de la terre sous les ongles, êtes complètement en sueur et vous vous sentez souillé de l'intérieur. Mais vous avez votre dû, alors vous vous mettez en route après avoir refermé le cercueil et rebouché la tombe.
+
+Alors que vous marchez vers l'entrée du cimetière vous entendez des pas qui suit votre cadence.
+
+Vous vous retournez mais rien... étrange, c'est sans doute le vent...
+
+Vous ouvrez la porte du cimetière. Cette dernière grince de nouveau. Vous claquez le portail, refermez à clé et reprenez votre route.
 
 OBJETS DEFAUT : []
 
-OBJETS CLE DU CIMETIERE : 
+OBJETS CLE DU CIMETIERE : BRAS EN OR
 
-ISSUES DEFAUT : 
+ISSUES DEFAUT : S : Cabane du gardien du cimetière
 
-ISSUES BRAS D'OR : 
+ISSUES BRAS D'OR : S : Cabane du gardien du cimetière
 
 
 ===============================================================================================================
