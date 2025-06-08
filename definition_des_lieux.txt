@@ -11,9 +11,9 @@ Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche d
 Nous sommes en 1956, et vous avez ouïe dire qu'un américain, vétéran de la seconde guerre était passé il y a peu.
 Ce vétéran se distinguait facilement, car il avait perdu son bras à cause d'un tir d'obus sur le front, après quoi il a été rapatrié aux États-Unis.
 
-Quelques temps après, il héritait d'une grande fortune, il décida par ce biais de remplacer son bras. Il aurait à la place bras en or massif. Il demanda les meilleurs médecins pour s'occuper de son cas. Alors ces derniers se mirent sur le coup afin de lui greffer bras en or.
+Quelques temps après, il héritait d'une grande fortune, et décida par ce biais de remplacer son bras. Il aurait à la place bras en or massif. Il demanda les meilleurs médecins pour s'occuper de son cas. Alors ces derniers se mirent sur le coup afin de lui greffer un bras en or.
 
-Cet homme, l'homme au bras d'or était donc de passage pour se rendre à Munich. Il avait pu venir à bord de sa belle voiture, une cadillac rouge décapotable. Tandis qu'il parcourait ces longues routes désertes tout en faisant rugir son moteur, si vite dans une forêt si sombre qu'elle ne laissait pas passer un seul rayon du Soleil il ne vit malheureusement pas ce virage... un virage à 180 degrés en tête d'épingle... 
+Cet homme, l'homme au bras d'or était donc de passage pour se rendre à Munich. Il avait pu venir à bord de sa belle voiture, une cadillac rouge décapotable. Tandis qu'il parcourait ces longues routes désertes tout en faisant rugir son moteur, si vite dans une forêt si sombre qu'elle ne laissait pas passer un seul rayon du Soleil il ne vit malheureusement pas ce virage... un virage en tête d'épingle... 
 
 *BOOM* *CRACK* *VLAN*
 
@@ -268,11 +268,13 @@ TEXTE CLE DU CIMETIERE : Vous ouvrez la porte. Cette dernière manquant d'huile 
 
 Vous marchez pas à pas dans l'allée du cimetière à la recherche du nom du défunt au bras d'or.
 
-[NOM 1 - EPITAPHE] Commentaire ...
+[Johann Meier - "Endormi dans l’accomplissement fidèle du devoir – Un bon père, un héros silencieux"] Non pas lui, je cherche un américain.
 
-[NOM 2 - EPITAPHE] Commentaire ... 
+[Élise Dubois - "À notre chère Élise – Douce lumière de nos vies, éteinte trop tôt."] Je commence à avoir vraiment froid ...
 
-Vous continuez à parcourir l'allée, arrivé vers le fond du cimetière vous son nom ... "" - EPITAPHE...
+[Giuseppe Rinaldi - "À jamais dans le cœur de tes proches – Repose en paix, cher Giuseppe."] Repose en paix Giuseppe.
+
+Vous continuez à parcourir l'allée, arrivé vers le fond du cimetière vous voyez gravé sur une pierre tombale : [William H. Carter - "Il donna son bras pour la liberté, et porta son souvenir en or. Que son courage brille à jamais."]
 
 Il est temps de se mettre à creuser. Votre coeur bat la chamade, vous savez pertinemment que vous ne devriez pas faire cela. Mais après tout il faut bien qu'un tel ouvrage serve à quelqu'un.
 
