@@ -6,7 +6,7 @@ Nom du jeu: L'homme au bras d'or...
 
 LIEU : INTRODUCTION
 
-Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
+TEXTE DEFAUT : Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...
 
 Nous sommes en 1956, et vous avez ouïe dire qu'un américain, vétéran de la seconde guerre était passé il y a peu.
 Ce vétéran se distinguait facilement, car il avait perdu son bras à cause d'un tir d'obus sur le front, après quoi il a été rapatrié aux États-Unis.
@@ -30,9 +30,9 @@ Vous devez préparer d'abord vos affaires...
 Vous devez prendre avec vous de quoi creuser pour parvenir à récupérer le bras.
 
 
-OBJETS => []
+OBJETS DEFAUT => []
 
-ISSUES => N : AUBERGE
+ISSUES DEFAUT => N : AUBERGE
 
 
 ===============================================================================================================
@@ -43,24 +43,26 @@ LIEU : AUBERGE
 TEXTE DEFAUT : 
 Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tombe et emporter le bras en or massif...
 
-TEXTE CLÉ AUBERGE + PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
+TEXTE CLE DE L'AUBERGE + PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
 
-TEXTE BRAS D'OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : 
+TEXTE BRAS EN OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : 
 "!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!". 
 Votre sang ne fait qu'un tour, et quand vous regardez à travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus.
 
 OBJETS => []
 
-ISSUES DEFAUT => S : CAVE DE L'AUBERGE (PELLE a récupérer); E : CHAMBRE A L'ETAGE (CLÉ AUBERGE à récupérer) 
+ISSUES DEFAUT : E : CHAMBRE A L'ETAGE (CLÉ AUBERGE à récupérer) 
 
-ISSUES CLÉ AUBERGE + PELLE => S : CAVE ; E : CHAMBRE A L'ETAGE ; N : EXTERIEUR DE L'AUBERGE
+ISSUES CLE DE L'AUBERGE : S : CAVE ; E : CHAMBRE A L'ETAGE
 
-ISSUES BRAS EN OR : S : CAVE ; E : CHAMBRE
+ISSUES PELLE : S : CAVE ; E : CHAMBRE A L'ETAGE ; N : EXTERIEUR DE L'AUBERGE
+
+ISSUES BRAS EN OR : S : CAVE ; E : CHAMBRE A L'ETAGE
 
 ===============================================================================================================
 
 
-LIEU : CAVE DE L'AUBERGE
+LIEU : CAVE
 
 TEXTE DEFAUT : 
 Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boissons que vous servez... malgré les années, quand vous pénetrez dans cette pièce, un frisson vous parcourt l'échine.
@@ -68,14 +70,14 @@ Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boiss
 
 TEXTE PELLE : Vous avez récupéré votre pelle, il vous tarde de sortir de cette pièce.
 
-TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
+TEXTE BRAS EN OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
 "!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !
 
 OBJETS DEFAUT : PELLE
 
 ISSUES DEFAUT : AUBERGE
 
-ISSUES BRAS D'OR : SOUS UN BANC ; DANS UNE CAISSE ; DANS UNE ARMOIRE
+ISSUES BRAS EN OR : SOUS UN BANC ; DANS UNE CAISSE ; DANS UNE ARMOIRE
 
 
 ===============================================================================================================
@@ -87,14 +89,14 @@ TEXTE DEFAUT : Votre chambre vous rassure, il vous plaît de lire des livres fan
 
 TEXTE CLE DE L'AUBERGE : Ah vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.
 
-TEXTE BRAS D'OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
+TEXTE BRAS EN OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
 "!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !
 
-OBJETS DEFAUT : CLE
+OBJETS DEFAUT : CLE DE L'AUBERGE
 
 ISSUES DEFAUT : AUBERGE
 
-ISSUES BRAS D'OR : E : Dans votre lit sous vos draps ; S : Derrière le rideau
+ISSUES BRAS EN OR : E : SOUS LA COUETTE DANS VOTRE LIT ; S : DERRIERE LE RIDEAU
 
 
 ===============================================================================================================
@@ -111,7 +113,7 @@ TEXTE DEFAUT : Vous vous cachez sous le banc, dos à la porte de la cave, le bra
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : N : Epilogue
+ISSUES DEFAUT : N : EPILOGUE
 
 
 ===============================================================================================================
@@ -128,7 +130,7 @@ TEXTE DEFAUT : Vous ouvrez la caisse, vous pliez en deux pour entrer dedans, le 
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : N : Epilogue
+ISSUES DEFAUT : N : EPILOGUE
 
 
 ===============================================================================================================
@@ -145,7 +147,7 @@ TEXTE DEFAUT : L'amoire est assez grande pour vous accueillir, vous et le bras e
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : N : Epilogue
+ISSUES DEFAUT : N : EPILOGUE
 
 
 ===============================================================================================================
@@ -162,7 +164,7 @@ TEXTE DEFAUT : Vous sautez dans votre lit et vous recroquevillez sous la couette
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : N : Epilogue
+ISSUES DEFAUT : N : EPILOGUE
 
 
 ===============================================================================================================
@@ -179,7 +181,7 @@ TEXTE DEFAUT : Vous vous faufilez derrière le rideau et serrez le bras en or co
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : N : Epilogue
+ISSUES DEFAUT : N : EPILOGUE
 
 
 ===============================================================================================================
@@ -189,14 +191,14 @@ LIEU : EXTERIEUR DE L'AUBERGE
 
 TEXTE DEFAUT : "La température est glaciale cette nuit... au moins je ne risque pas de croiser grand monde."
 
-TEXTE BRAS D'OR : Tout en courant vous apercevez enfin le pas de votre porte ! Les pas que vous entendez derrière vous vous cadencent toujours. À nouveau un frisson vous parcours l'échine et vous entendez :
+TEXTE BRAS EN OR : Tout en courant vous apercevez enfin le pas de votre porte ! Les pas que vous entendez derrière vous vous cadencent toujours. À nouveau un frisson vous parcours l'échine et vous entendez :
 "! Q U I  A  V O L É  M O N  B R A S  D ' O R  !"
 
 OBJETS DEFAUT : []
 
-ISSUES DEFAUT : S : Auberge ; O : Cabane du gardien ; E : Garagiste ; 
+ISSUES DEFAUT : S : AUBERGE ; O : CABANE DU GARDIEN DU CIMETIERE ; E : GARAGISTE ; 
 
-ISSUES BRAS D'OR : S : Auberge
+ISSUES BRAS EN OR : S : AUBERGE
 
 
 ===============================================================================================================
@@ -208,13 +210,10 @@ TEXTE DEFAUT : L'établissement de Bruno le garagiste. Avec tous ces accidents c
 
 TEXTE BARRE A MINE : Je rendrai cette barre à mine à Bruno plus tard. Elle pourrait me servir si quelque chose me barre la route.
 
-(TEXTE BRAS D'OR : )
-
 OBJETS DEFAUT : BARRE A MINE
 
-ISSUES DEFAUT : O : Auberge
+ISSUES DEFAUT : O : AUBERGE
 
-(ISSUES BRAS D'OR : N : Epilogue)
 
 
 ===============================================================================================================
@@ -235,9 +234,9 @@ Avec cette barre à mine je vais pouvoir forcer son abri de jardin.
 Bingo ! La clé est maintenant à portée de main !
 
 
-Texte CLE DU CIMETIERE : Merci Roger ! Je te la rendrai dès que j'en aurai fini avec cette histoire...
+TEXTE CLE DU CIMETIERE : Merci Roger ! Je te la rendrai dès que j'en aurai fini avec cette histoire...
 
-TEXTE BRAS D'OR : Tandis que vous approchez de la cabane du gardien, vous entendez le verrou du portail qui s'enclenche... la porte grince, puis vous l'entendez claquer. Vous entendez des bruits de pas qui vous cadencent, vous accélérez, les pas s'accélèrent également. Un frisson vous parcours l'échine et vous entendez gronder :
+TEXTE BRAS EN OR : Tandis que vous approchez de la cabane du gardien, vous entendez le verrou du portail qui s'enclenche... la porte grince, puis vous l'entendez claquer. Vous entendez des bruits de pas qui vous cadencent, vous accélérez, les pas s'accélèrent également. Un frisson vous parcours l'échine et vous entendez gronder :
 "Q U I  A  V O L É  M O N  B R A S  D ' O R"
 
 Vous êtes suivi !
@@ -248,9 +247,9 @@ OBJETS DEFAUT : []
 
 OBJETS BARRE A MINE : CLE DU CIMETIERE
 
-ISSUES DEFAUT : N : Cimetière ; E : Extérieur de l'auberge
+ISSUES DEFAUT : N : CIMETIERE ; E : EXTERIEUR DE L'AUBERGE
 
-ISSUES BRAS D'OR : E : Extérieur de l'auberge
+ISSUES BRAS EN OR : E : EXTERIEUR DE L'AUBERGE
 
 
 ===============================================================================================================
@@ -258,7 +257,7 @@ ISSUES BRAS D'OR : E : Extérieur de l'auberge
 
 LIEU : CIMETIERE
 
-TEXTE DEFAUT : Le cimetière... ça m'fou les j'tons d'être là à cette heure-ci... mais bon, si je veux passer l'hiver je n'ai pas le choix.
+TEXTE DEFAUT : Le cimetière... ça m'fou les j'tons d'être là à cette heure-ci... enfin bon, si je veux passer l'hiver je n'ai pas le choix.
 
 *CLINK* *CLONK*
 
@@ -278,7 +277,7 @@ Vous continuez à parcourir l'allée, arrivé vers le fond du cimetière vous vo
 
 Il est temps de se mettre à creuser. Votre coeur bat la chamade, vous savez pertinemment que vous ne devriez pas faire cela. Mais après tout il faut bien qu'un tel ouvrage serve à quelqu'un.
 
-TEXTE BRAS D'OR : Vous avez de la terre sous les ongles, êtes complètement en sueur et vous vous sentez souillé de l'intérieur. Mais vous avez votre dû, alors vous vous mettez en route après avoir refermé le cercueil et rebouché la tombe.
+TEXTE BRAS EN OR : Vous avez de la terre sous les ongles, êtes complètement en sueur et vous vous sentez souillé de l'intérieur. Mais vous avez votre dû, alors vous vous mettez en route après avoir refermé le cercueil et rebouché la tombe.
 
 Alors que vous marchez vers l'entrée du cimetière vous entendez des pas qui suit votre cadence.
 
@@ -290,9 +289,18 @@ OBJETS DEFAUT : []
 
 OBJETS CLE DU CIMETIERE : BRAS EN OR
 
-ISSUES DEFAUT : S : Cabane du gardien du cimetière
+ISSUES DEFAUT : S : CABANE DU GARDIEN DU CIMETIERE
 
-ISSUES BRAS D'OR : S : Cabane du gardien du cimetière
+ISSUES BRAS EN OR : S : CABANE DU GARDIEN DU CIMETIERE
 
 
 ===============================================================================================================
+
+
+LIEU : EPILOGUE
+
+TEXTE DEFAUT : Le corps de l'aubergiste fut retrouvé plus tard, le visage déformé d'épouvante, il serait décédé suite à un infarctus du myocarde doublé d'un accident vasculaire cérébral... très jeune pourtant et sans antécédents médicaux, les médecins ne parviennent pas à comprendre comment et pourquoi cela est arrivé. Vous êtes la seule personne à détenir la vérité...
+
+Merci d'avoir joué à mon premier jeu d'aventure textuel !
+
+Au plaisir de vous retrouver pour d'autres aventures !

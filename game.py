@@ -119,86 +119,132 @@ class Game:
 
 
 	def charger_scene(self):
-		choix = ""
-		self.charger_issues_disponibles()
-		self.charger_cle_objets()
-		self.l_a.objets[self.cle_objets].sort()
-		self.j.objets.sort()
-		for o in self.j.objets:
-			for ob in self.l_a.objets[self.cle_objets]:
-				if o == ob:
-					self.l_a.objets[self.cle_objets].remove(o)
-		self.charger_cle_objets()
+		epilogue = False
+		while not epilogue:
+			choix = ""
+			self.charger_issues_disponibles()
+			self.charger_cle_objets()
+			self.l_a.objets[self.cle_objets].sort()
+			self.j.objets.sort()
+			for o in self.j.objets:
+				for ob in self.l_a.objets[self.cle_objets]:
+					if o == ob:
+						self.l_a.objets[self.cle_objets].remove(o)
+			self.charger_cle_objets()
 
-		while not choix:
-			clear()
-			compteur_objets = 0
-			print(("-" * 20) + "\n")
-			print(f"LIEU ACTUEL : {self.l_a.titre.title()}\n")
-			print(("-" * 20) + "\n")
-			time_sleep_between_lines()
-			print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
-			print(("-" * 20) + "\n")
-			time_sleep_between_lines()
-			print("OBJETS PRESENTS DANS LE LIEU:\n") # JE DOIS REFACTO MON AFFICHAGE D'OBJETS POUR PERMETTRE D'AFFICHER UNE LISTE SI 
-			# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
-			for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
-				print(f"[{i}] {o.capitalize()}")
-				compteur_objets = i
+			while not choix:
+				clear()
+				compteur_objets = 0
+				print(("-" * 20) + "\n")
+				print(f"LIEU ACTUEL : {self.l_a.titre.title()}\n")
+				print(("-" * 20) + "\n")
+				time_sleep_between_lines()
+				print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
+				print(("-" * 20) + "\n")
+				time_sleep_between_lines()
+				print("OBJETS PRESENTS DANS LE LIEU:\n") # JE DOIS REFACTO MON AFFICHAGE D'OBJETS POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+				# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+				for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
+					print(f"[{i}] {o.capitalize()}")
+					compteur_objets = i
 
-			print("\nVOS POSSESSIONS:\n")
-			for i, o in enumerate(self.j.objets, start=compteur_objets+1):
-				print(f"[{i}] {o.capitalize()}")
-			print()
+				print("\nVOS POSSESSIONS:\n")
+				for i, o in enumerate(self.j.objets, start=compteur_objets+1):
+					print(f"[{i}] {o.capitalize()}")
+				print()
 
-			print(("-" * 20) + "\n")
-			time_sleep_between_lines()
-			print("ISSUES POSSIBLES:\n") # JE DOIS REFACTO MON AFFICHAGE D'ISSUES POUR PERMETTRE D'AFFICHER UNE LISTE SI 
-			# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
-			for k, v in self.issues_disponibles.items():
-				print(f"{k.title()} : {v.title()}")
-			print(("-" * 20) + "\n")
-			time_sleep_between_lines()
-			print("ACTIONS POSSIBLES:\n[1] PRENDRE UN OBJET\n[2] ALLER DANS UNE DIRECTION (N/S/E/O)\n[0] QUITTER LE JEU")
-			choix = input("> ")
-			match choix:
-				case "1":
-					print("PRENDRE UN OBJET\n")
-					print("Veuillez indiquer l'objet à saisir (nombre affiché entre crochets) : ")
-					o_index = input("> ")
-					o_take = False
-					for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
-						if str(i) == o_index:
-							o_take = True
-							self.prendre_un_objet(o)
-							self.j.mettre_a_jour_les_objets(objets=self.j.objets)
-					if not o_take:
-						print(f"L'objet à l'index [{o_index}] n'existe pas.")
+				print(("-" * 20) + "\n")
+				time_sleep_between_lines()
+				print("ISSUES POSSIBLES:\n") # JE DOIS REFACTO MON AFFICHAGE D'ISSUES POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+				# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+				for k, v in self.issues_disponibles.items():
+					print(f"{k.title()} : {v.title()}")
+				print(("-" * 20) + "\n")
+				time_sleep_between_lines()
+				print("ACTIONS POSSIBLES:\n[1] PRENDRE UN OBJET\n[2] ALLER DANS UNE DIRECTION (N/S/E/O)\n[0] QUITTER LE JEU")
+				choix = input("> ")
+				match choix:
+					case "1":
+						print("PRENDRE UN OBJET\n")
+						print("Veuillez indiquer l'objet à saisir (nombre affiché entre crochets) : ")
+						o_index = input("> ")
+						o_take = False
+						for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
+							if str(i) == o_index:
+								o_take = True
+								self.prendre_un_objet(o)
+								self.j.mettre_a_jour_les_objets(objets=self.j.objets)
+						if not o_take:
+							print(f"L'objet à l'index [{o_index}] n'existe pas.")
+							input()
+
+					case "2":
+						print("ALLER DANS UNE DIRECTION\n")
+						print("Veuillez indiquer la direction à prendre (N/S/E/O): ")
+						d = input("> ")
+						new_lieu = self.choisir_une_direction(direction=d)
+						if new_lieu:
+							self.l_a = new_lieu
+							self.j.mettre_a_jour_le_lieu(new_lieu.titre)
+							if self.l_a.titre == "epilogue":
+								epilogue = True
+
+					case "0":
+						self.j.mettre_a_jour_le_lieu(nouveau_lieu=self.j.lieu)
+						self.j.mettre_a_jour_les_objets(objets=self.j.objets)
+						print_letters_slowly_for_game_instructions("Votre progression a été sauvegardée...\n")
+						print_letters_slowly_for_game_instructions("Merci d'avoir joué ! A bientôt !")
+						input()
+						clear()
+						sys.exit()
+						return
+
+					case _:
+						choix = ""
+						print('La commande saisie est incorrecte. Appuyez sur "Entrée" pour continuer.')
 						input()
 
-				case "2":
-					print("ALLER DANS UNE DIRECTION\n")
-					print("Veuillez indiquer la direction à prendre (N/S/E/O): ")
-					d = input("> ")
-					new_lieu = self.choisir_une_direction(direction=d)
-					if new_lieu:
-						self.l_a = new_lieu
-						self.j.mettre_a_jour_le_lieu(new_lieu.titre)
+		print(("-" * 20) + "\n")
+		print(f"LIEU ACTUEL : {self.l_a.titre.title()}\n")
+		print(("-" * 20) + "\n")
+		time_sleep_between_lines()
+		print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
+		print(("-" * 20) + "\n")
+		time_sleep_between_lines()
+		print("OBJETS PRESENTS DANS LE LIEU:\n") # JE DOIS REFACTO MON AFFICHAGE D'OBJETS POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+		# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+		for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
+			print(f"[{i}] {o.capitalize()}")
+			compteur_objets = i
 
-				case "0":
-					self.j.mettre_a_jour_le_lieu(nouveau_lieu=self.j.lieu)
-					self.j.mettre_a_jour_les_objets(objets=self.j.objets)
-					print_letters_slowly_for_game_instructions("Votre progression a été sauvegardée...\n")
-					print_letters_slowly_for_game_instructions("Merci d'avoir joué ! A bientôt !")
-					input()
-					clear()
-					sys.exit()
-					return
+		print("\nVOS POSSESSIONS:\n")
+		for i, o in enumerate(self.j.objets, start=compteur_objets+1):
+			print(f"[{i}] {o.capitalize()}")
+		print()
 
-				case _:
-					choix = ""
-					print('La commande saisie est incorrecte. Appuyez sur "Entrée" pour continuer.')
-					input()
+		print(("-" * 20) + "\n")
+		time_sleep_between_lines()
+		print("ISSUES POSSIBLES:\n") # JE DOIS REFACTO MON AFFICHAGE D'ISSUES POUR PERMETTRE D'AFFICHER UNE LISTE SI 
+		# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
+		for k, v in self.issues_disponibles.items():
+			print(f"{k.title()} : {v.title()}")
+		print(("-" * 20) + "\n")
+		time_sleep_between_lines()
+		print("ACTIONS POSSIBLES:\n[0] QUITTER LE JEU")
+		choix = input("> ")
+		if choix == "0":
+			self.j.mettre_a_jour_le_lieu(nouveau_lieu=self.j.lieu)
+			self.j.mettre_a_jour_les_objets(objets=self.j.objets)
+			print_letters_slowly_for_game_instructions("Votre progression a été sauvegardée...\n")
+			print_letters_slowly_for_game_instructions("Merci d'avoir joué ! A bientôt !")
+			input()
+			clear()
+			sys.exit()
+			return
+		else:
+			choix = ""
+			print('La commande saisie est incorrecte. Appuyez sur "Entrée" pour continuer.')
+			input()
 
 
 

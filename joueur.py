@@ -77,6 +77,5 @@ def get_all_joueurs():
 
 
 if __name__ == "__main__":
-	j = Joueur(nom="Nathan", lieu="Piscine", objets=["Maillot de bain", "Serviette"])
+	j = Joueur(nom="dummy", lieu="dummy", objets=[])
 	j.sauvegarder_joueur()
-	print(Joueur.DB.search(Joueur.QUERY_JOUEUR.nom == "Jeannot"))
