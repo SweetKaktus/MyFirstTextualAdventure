@@ -20,13 +20,18 @@ class Lieu:
 	DB = TinyDB(BASE_DIR / 'datas' / 'lieux.json')
 	QUERY_LIEU = Query()
 
-	def __init__(self, titre: str, textes: dict, objets: list, issues: dict):
+	def __init__(self, titre: str, textes: dict, objets: dict, issues: dict):
 		self.titre: str = titre.lower()
 		self.textes: dict = textes
-		self.objets: list = objets
+		self.objets: dict = objets
 		self.issues: dict = issues
-		for o in self.objets:
-				o = o.lower()
+		# for o in self.objets:
+		# 		o = o.lower()
+		for k in self.objets.keys():
+			k = k.lower()
+			for ke in self.objets[k]:
+				ke = ke.lower()
+
 		for k in self.issues.keys():
 			k = k.lower()
 			for ke, i in self.issues[k].items():

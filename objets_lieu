@@ -1,0 +1,135 @@
+Modele: 
+Lieu(
+	titre = '', 
+	textes = {
+		"" : "",
+	}, 
+	objets = {
+		"" : [],
+	}, 
+	issues = {
+		"" : {
+			"" : "",
+		},
+	}
+)
+
+========================
+
+INTRO:
+Lieu(
+	titre = 'introduction', 
+	textes = {
+		"defaut" : "Vous êtes le gérant d'une auberge en plein milieu de la forêt noire, proche de Munich en Allemagne. il y a peu de passage et les temps sont durs. Vous ne savez par quel moyen vous subviendrez à vos besoins durant l'hiver prochain...\n\nNous sommes en 1956, et vous avez ouïe dire qu'un américain, vétéran de la seconde guerre était passé il y a peu.\nCe vétéran se distinguait facilement, car il avait perdu son bras à cause d'un tir d'obus sur le front, après quoi il a été rapatrié aux États-Unis.\n\nQuelques temps après, il héritait d'une grande fortune, et décida par ce biais de remplacer son bras. Il aurait à la place bras en or massif. Il demanda les meilleurs médecins pour s'occuper de son cas. Alors ces derniers se mirent sur le coup afin de lui greffer un bras en or.\n\nCet homme, l'homme au bras d'or était donc de passage pour se rendre à Munich. Il avait pu venir à bord de sa belle voiture, une cadillac rouge décapotable. Tandis qu'il parcourait ces longues routes désertes tout en faisant rugir son moteur, si vite dans une forêt si sombre qu'elle ne laissait pas passer un seul rayon du Soleil il ne vit malheureusement pas ce virage... un virage en tête d'épingle... \n\n*BOOM* *CRACK* *VLAN*\n\nIl succomba à ses blessures dans un accident tragique.\n\nCe genre d'accident arrivait si souvent au niveau de ce virage, qu'un cimetière avait finit par être construit non loin.\nC'est là bas qu'on l'y avait enterré... avec son bras en or.\n\nUne idée vous traverse alors l'esprit... ce bras en or ne manquera à personne après tout, et si je ne trouve pas une solution, je finirai comme lui avant le prochain printemps.\n\nC'est décidez, vous irez chercher ce bras en or quoi qu'il en coûte.\n\nVous devez préparer d'abord vos affaires...\nVous devez prendre avec vous de quoi creuser pour parvenir à récupérer le bras.",
+	}, 
+	objets = {
+		"defaut" : [],
+	}, 
+	issues = {
+		"defaut" : {
+			"n" : "auberge",
+		},
+	}
+)
+
+=======================
+AUBERGE
+
+Lieu(
+	titre = 'auberge', 
+	textes = {
+		"defaut" : "Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tombe et emporter le bras en or massif...",
+		"cle de l'auberge" : "Vous avez la clé de l'auberge. Récupérez de quoi creuser et vous serez prêt.",
+		"pelle" : "Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.",
+		"bras en or" : "Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : \n"!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!". \nVotre sang ne fait qu'un tour, et quand vous regardez à travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus."
+	}, 
+	objets = {
+		"defaut" : [],
+	}, 
+	issues = {
+		"defaut" : {
+			"e" : "chambre a l'etage",
+		},
+		"cle de l'auberge" : {
+			"s" : "cave",
+			"e" : "chambre a l'etage",
+		},
+		"pelle" : {
+			"n" : "exterieur de l'auberge",
+			"s" : "cave",
+			"e" : "chambre a l'etage",
+		},
+		"bras en or" : {
+			"s" : "cave",
+			"e" : "chambre a l'etage",
+		}
+	}
+)
+
+=======================
+CAVE
+
+Lieu(
+	titre = 'cave', 
+	textes = {
+		"defaut" : "Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boissons que vous servez... malgré les années, quand vous pénetrez dans cette pièce, un frisson vous parcourt l'échine.",
+		"pelle" : "Vous avez récupéré votre pelle, il vous tarde de sortir de cette pièce.",
+		"bras en or" : "Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre \n"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !",
+	}, 
+	objets = {
+		"defaut" : ["pelle"],
+	}, 
+	issues = {
+		"defaut" : {
+			"n" : "auberge",
+		},
+		"bras en or" : {
+			"s" : "dans une caisse",
+			"o" : "dans une armoire",
+			"e" : "sous un banc",
+		},
+	}
+)
+
+=======================
+CHAMBRE A L'ETAGE
+
+Lieu(
+	titre = "chambre a l'etage", 
+	textes = {
+		"defaut" : "Votre chambre vous rassure, il vous plaît de lire des livres fantastiques le soir avant de dormir.",
+		"cle de l'auberge" : "Ah vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.",
+		"bras en or" : "Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre \n"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !",
+	}, 
+	objets = {
+		"defaut" : ["cle de l'auberge"],
+	}, 
+	issues = {
+		"defaut" : {
+			"o" : "auberge",
+		},
+		"bras en or" : {
+			"e" : "sous la couette dans votre lit",
+			"s" : "derriere le rideau",
+		},
+	}
+)
+
+
+=======================
+SOUS UN BANC
+
+Lieu(
+	titre = '', 
+	textes = {
+		"" : "",
+	}, 
+	objets = {
+		"" : [],
+	}, 
+	issues = {
+		"" : {
+			"" : "",
+		},
+	}
+)

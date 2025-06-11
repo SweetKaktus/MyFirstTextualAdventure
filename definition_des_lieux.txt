@@ -43,7 +43,9 @@ LIEU : AUBERGE
 TEXTE DEFAUT : 
 Vous êtes dans votre auberge à la recherche d'équipement pour creuser la tombe et emporter le bras en or massif...
 
-TEXTE CLE DE L'AUBERGE + PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
+TEXTE PELLE : Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'à vous mettre en route.
+
+TEXTE CLE DE L'AUBERGE : Vous avez la clé de l'auberge. Récupérez de quoi creuser et vous serez prêt.
 
 TEXTE BRAS EN OR : Vous rentrez en trombe dans votre auberge et fermez tous les verrous à double tour : Celui du haut, celui au niveau de la poignée et le dernier au bas de la porte. Des coups sont assénés dans la porte et vous entendez juste derrière elle : 
 "!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!". 
@@ -87,7 +89,7 @@ LIEU : CHAMBRE A L'ETAGE
 
 TEXTE DEFAUT : Votre chambre vous rassure, il vous plaît de lire des livres fantastiques le soir avant de dormir.
 
-TEXTE CLE DE L'AUBERGE : Ah vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.
+TEXTE CLE DE L'AUBERGE : Ah... vous avez trouvé la clé de votre auberge. Vous n'avez plus rien à faire ici.
 
 TEXTE BRAS EN OR : Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes... vous frémissez lorsque vous entendez d'une voix lugubre 
 "!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !
