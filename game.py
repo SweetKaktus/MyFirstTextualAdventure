@@ -18,7 +18,7 @@ joueur_dummy = ""
 all_lieux = get_all_lieux() # Tous les objets lieux à manipuler pour la partie, il ne faudra jamais modifier les infos en base sous peine de casser le jeu, je ne dois manipuler que les objets dans all_lieux
 
 for l in all_lieux:
-	if l.titre == "intro":
+	if l.titre == "introduction":
 		lieu_intro = l
 
 for j in get_all_joueurs():
@@ -44,7 +44,7 @@ class Game:
 			for o in self.j.objets:
 				if k == o:
 					return v
-		return self.l_a.textes["defaut"].capitalize()
+		return self.l_a.textes["defaut"]
 
 
 	def demarrer_jeu(self):

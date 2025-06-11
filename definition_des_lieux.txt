@@ -301,7 +301,7 @@ ISSUES BRAS EN OR : S : CABANE DU GARDIEN DU CIMETIERE
 
 LIEU : EPILOGUE
 
-TEXTE DEFAUT : Le corps de l'aubergiste fut retrouvé plus tard, le visage déformé d'épouvante, il serait décédé suite à un infarctus du myocarde doublé d'un accident vasculaire cérébral... très jeune pourtant et sans antécédents médicaux, les médecins ne parviennent pas à comprendre comment et pourquoi cela est arrivé. Vous êtes la seule personne à détenir la vérité...
+TEXTE DEFAUT : Le corps de l'aubergiste fut retrouvé le lendemain, le visage déformé d'épouvante, d'après les médecins, la cause du décès est un infarctus du myocarde doublé d'un accident vasculaire cérébral... très jeune pourtant et sans antécédents médicaux, les personne ne parvient à comprendre comment et pourquoi cela est arrivé. Vous êtes la seule personne à détenir la vérité...
 
 Merci d'avoir joué à mon premier jeu d'aventure textuel !
 
