@@ -40,10 +40,16 @@ class Game:
 
 
 	def afficher_texte_lieu_actuel(self):
+		# print(f"Lieu Actuel pour afficher texte = {self.l_a}")
 		for k, v in self.l_a.textes.items():
+			# print(self.l_a)
+			# input()
 			for o in self.j.objets:
 				if k == o:
+					# print(f"Texte visé = {v}")
 					return v
+		# print(self.l_a)
+		# input()
 		return self.l_a.textes["defaut"]
 
 
@@ -83,12 +89,16 @@ class Game:
 			for l in all_lieux:
 				# print(l.titre)
 				# print(self.l_a.issues[direction])
+				# input()
 				try:
-					l.titre == self.issues_disponibles[d].lower()
+					if l.titre == self.issues_disponibles[d].lower(): # JE PENSE AVOIR UN PB AVEC LE FAIT DE CHARGER LES BONNES ISSUES UNE FOIS QUE LE NOUVEAU LIEU EST CHARGÉ
 					# print(self.l_a.issues[direction])
-					print(f"Vous vous dirigez vers {self.issues_disponibles[d].capitalize()}")
-					input()
-					return l
+					# print(l.titre)
+					# input()
+					
+						print_letters_slowly_for_game_instructions(f"Vous vous dirigez vers {self.issues_disponibles[d].capitalize()}")
+						input()
+						return l # ICI JE RETOURNE LE LIEU ACTUEL JE DOIS RETOURNER LE NOUVEAU LIEU
 				except KeyError:
 					print(f"Il n'y a pas de chemin vers {d.title()}")
 					input()
@@ -121,6 +131,8 @@ class Game:
 	def charger_scene(self):
 		epilogue = False
 		while not epilogue:
+			# print("CHECK")
+			# input()
 			choix = ""
 			self.charger_issues_disponibles()
 			self.charger_cle_objets()
@@ -181,10 +193,18 @@ class Game:
 					case "2":
 						print("ALLER DANS UNE DIRECTION\n")
 						print("Veuillez indiquer la direction à prendre (N/S/E/O): ")
-						d = input("> ")
+						d = input("> ").lower()
 						new_lieu = self.choisir_une_direction(direction=d)
+						# print(f"new lieu = {new_lieu}")
+						# input()
+						# print(type(new_lieu))
+						# input()	
 						if new_lieu:
+							# print(f"new lieu = {new_lieu}")
+							# input()
 							self.l_a = new_lieu
+							# print(f"Lieu actuel = {self.l_a}")
+							# input()
 							self.j.mettre_a_jour_le_lieu(new_lieu.titre)
 							if self.l_a.titre == "epilogue":
 								epilogue = True

@@ -38,10 +38,10 @@ AUBERGE
 Lieu(
 	titre = 'auberge', 
 	textes = {
-		"defaut" : "Vous etes dans votre auberge a la recherche d'equipement pour creuser la tombe et emporter le bras en or massif...",
-		"cle de l'auberge" : "Vous avez la cle de l'auberge. Recuperez de quoi creuser et vous serez pret.",
-		"pelle" : "Vous avez recupere toutes vos affaires pour aller chercher le bras d'or. Il ne vous reste plus qu'a vous mettre en route.",
-		"bras en or" : "Vous rentrez en trombe dans votre auberge et fermez tous les verrous a double tour : Celui du haut, celui au niveau de la poignee et le dernier au bas de la porte. Des coups sont assenes dans la porte et vous entendez juste derrière elle : \n"!!  Q U I  A  V O L E  M O N  B R A S  D ' O R  !!". \nVotre sang ne fait qu'un tour, et quand vous regardez a travers le judas, vous ne voyez rien... votre coeur palpite de plus en plus."
+		"defaut" : "Vous êtes dans votre auberge à la recherche d'équipement pour creuser\nla tombe et emporter le bras en or massif...",
+		"cle de l'auberge" : "Vous avez la clé de l'auberge. Récupérez de quoi creuser et vous serez\nprêt.",
+		"pelle" : "Vous avez récupéré toutes vos affaires pour aller chercher le bras d'or.\nIl ne vous reste plus qu'à vous mettre en route.",
+		"bras en or" : "Vous rentrez en trombe dans votre auberge et fermez tous les verrous\nà double tour : Celui du haut, celui au niveau de la poignée et le\ndernier au bas de la porte. Des coups sont assénés dans la porte et\nvous entendez juste derrière elle :\n\"!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!\".\nVotre sang ne fait qu'un tour, et quand vous regardez a travers le judas,\nvous ne voyez rien... votre coeur palpite de plus en plus."
 	}, 
 	objets = {
 		"defaut" : [],
@@ -72,9 +72,9 @@ CAVE
 Lieu(
 	titre = 'cave', 
 	textes = {
-		"defaut" : "Votre cave, il y fait sombre et froid, vous y stockez la nourriture et les boissons que vous servez... malgre les annees, quand vous penetrez dans cette pièce, un frisson vous parcourt l'echine.",
-		"pelle" : "Vous avez recupere votre pelle, il vous tarde de sortir de cette pièce.",
-		"bras en or" : "Vous entendez tambouriner a la porte d'entree, puis les verrous sautes... vous fremissez lorsque vous entendez d'une voix lugubre \n"!!!  Q U I  A  V O L E  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !",
+		"defaut" : "Votre cave, il y fait sombre et froid, vous y stockez la nourriture et\nles boissons que vous servez... malgré les années, quand vous pénétrez\ndans cette pièce, un frisson vous parcourt l'échine.",
+		"pelle" : "Vous avez récupéré votre pelle, il vous tarde de sortir de cette pièce.",
+		"bras en or" : "Vous entendez tambouriner à la porte d'entrée,\npuis les verrous sautent... vous frémissez lorsque vous entendez\nd'une voix lugubre \n\"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!\" . . . Cachez-vous !",
 	}, 
 	objets = {
 		"defaut" : ["pelle"],
@@ -97,9 +97,9 @@ CHAMBRE A L'ETAGE
 Lieu(
 	titre = "chambre a l'etage", 
 	textes = {
-		"defaut" : "Votre chambre vous rassure, il vous plaît de lire des livres fantastiques le soir avant de dormir.",
-		"cle de l'auberge" : "Ah vous avez trouve la cle de votre auberge. Vous n'avez plus rien a faire ici.",
-		"bras en or" : "Vous entendez tambouriner a la porte d'entree, puis les verrous sautes... vous fremissez lorsque vous entendez d'une voix lugubre \n"!!!  Q U I  A  V O L E  M O N  B R A S  D ' O R  !!!" . . . Cachez-vous !",
+		"defaut" : "Votre chambre vous rassure, vous aimez y lire des livres fantastiques\nle soir avant de dormir.",
+		"cle de l'auberge" : "Ah... vous avez trouvé la cle de votre auberge.\nVous n'avez plus rien à faire ici.",
+		"bras en or" : "Vous entendez tambouriner à la porte d'entrée, puis les verrous sautes...\nvous frémissez lorsque vous entendez d'une voix lugubre \n\"!!!  Q U I  A  V O L É  M O N  B R A S  D ' O R  !!!\" . . . Cachez-vous !",
 	}, 
 	objets = {
 		"defaut" : ["cle de l'auberge"],
@@ -122,7 +122,7 @@ SOUS UN BANC
 Lieu(
 	titre = 'sous un banc', 
 	textes = {
-		"defaut" : "Vous vous cachez sous le banc, dos a la porte de la cave, le bras en or serre contre vous. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
+		"defaut" : "Vous vous cachez sous le banc, dos à la porte de la cave, le bras en\nor serré contre vous. Vous haletez lorsque vous entendez des pas\ndescendre les escaliers... la porte de la cave grince en s'ouvrant,\net vous entendez une voix chuchoter, comme si\nl'on soufflait dans votre nuque : \n\". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . .\"\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -140,7 +140,7 @@ DANS UNE CAISSE
 Lieu(
 	titre = 'dans une caisse', 
 	textes = {
-		"defaut" : "Vous ouvrez la caisse, vous pliez en deux pour entrer dedans, le bras en or serre contre votre poitrine. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
+		"defaut" : "Vous ouvrez la caisse, vous pliez en deux pour entrer dedans,\nle bras en or serré contre votre poitrine. Vous haletez lorsque vous\nentendez des pas descendre les escaliers... la porte de la cave grince\nen s'ouvrant, et vous entendez une voix chuchoter, comme si l'on\nsoufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -159,7 +159,7 @@ DANS UNE ARMOIRE
 Lieu(
 	titre = 'dans une armoire', 
 	textes = {
-		"defaut" : "L'amoire est assez grande pour vous accueillir, vous et le bras en or que vous tenez fermemant dans vos bras. Vous entrez dedans puis observez via l'interstice ce qu'il se trame... mais de ne voyez rien. Vous haletez lorsque vous entendez des pas descendre les escaliers... la porte de la cave grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
+		"defaut" : "L'amoire est assez grande pour vous accueillir, vous et le bras en or\nque vous tenez fermemant dans vos bras. Vous entrez dedans puis\nobservez via l'interstice ce qu'il se trame... mais de ne voyez rien.\nVous haletez lorsque vous entendez des pas descendre les escaliers...\nla porte de la cave grince en s'ouvrant, et vous entendez une voix\nchuchoter, comme si l'on soufflait dans votre nuque : \n\". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . .\"\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -179,7 +179,7 @@ SOUS LA COUETTE DANS VOTRE LIT
 Lieu(
 	titre = 'sous la couette dans votre lit', 
 	textes = {
-		"defaut" : "Vous sautez dans votre lit et vous recroquevillez sous la couette, le bras en or serre contre votre poitrine. Vous priez pour que cela ne soit qu'un mauvais reve ou un mirage... Vous haletez lorsque vous entendez des pas monter les escaliers... la porte de votre chambre grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
+		"defaut" : "Vous sautez dans votre lit et vous recroquevillez sous la couette,\nle bras en or serré contre votre poitrine. Vous priez pour que cela ne\nsoit qu'un mauvais reve ou un mirage... Vous haletez lorsque vous\nentendez des pas monter les escaliers... la porte de votre chambre\ngrince en s'ouvrant, et vous entendez une voix chuchoter,\ncomme si l'on soufflait dans votre nuque : \n\". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . .\"\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -199,7 +199,7 @@ DERRIERE LE RIDEAU
 Lieu(
 	titre = 'derriere le rideau', 
 	textes = {
-		"defaut" : "Vous vous faufilez derrière le rideau et serrez le bras en or contre vous afin qu'il ne depasse pas... Vous haletez lorsque vous entendez des pas monter les escaliers... la porte de votre chambre grince en s'ouvrant, et vous entendez une voix chuchoter, comme si l'on soufflait dans votre nuque : \n". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . ."\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
+		"defaut" : "Vous vous faufilez derrière le rideau et serrez le bras en or contre\nvous afin qu'il ne depasse pas... Vous haletez lorsque vous entendez\ndes pas monter les escaliers... la porte de votre chambre grince en\ns'ouvrant, et vous entendez une voix chuchoter, comme si l'on\nsoufflait dans votre nuque : \n\". . .  q u i  a  v o l e  m o n  b r a s  d ' o r  . . .\"\n\n!!! C'EST TOI !!!\n\n    #########    \n  #############  \n #.............# \n#...............#\n#.....-   -.....#\n #...| | | |...# \n #... -   - ...# \n #.... ^^^ ....# \n #...   -   ...# \n  #..  /.\\  ..#  \n   #.  |@|  .#   \n   #.  \\./  .#   \n   #... - ...#   \n    #.......#    \n     #######     ",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -217,8 +217,8 @@ EXTERIEUR DE L'AUBERGE
 Lieu(
 	titre = 'exterieur de l'auberge, 
 	textes = {
-		"defaut" : "La temperature est glaciale cette nuit... au moins je ne risque pas de croiser grand monde.",
-		"bras en or" : "Tout en courant vous apercevez enfin le pas de votre porte ! Les pas que vous entendez derrière vous vous cadencent toujours. A nouveau un frisson vous parcours l'echine et vous entendez :\n"! Q U I  A  V O L E  M O N  B R A S  D ' O R  !"",
+		"defaut" : "La température est glaciale cette nuit... au moins je ne risque pas\nde croiser grand monde.",
+		"bras en or" : "Tout en courant vous apercevez enfin le pas de votre porte !\nLes pas que vous entendez derrière vous vous cadencent toujours.\nÀ nouveau un frisson vous parcours l'échine et vous entendez :\n\"! Q U I  A  V O L E  M O N  B R A S  D ' O R  !\"",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -241,8 +241,8 @@ GARAGISTE
 Lieu(
 	titre = 'garagiste', 
 	textes = {
-		"defaut" : "L'etablissement de Bruno le garagiste. Avec tous ces accidents c'est lui qui recupère les carcasses des voitures... ce vieux bougre profite clairement de la situation...",
-		"barre a mine" : "Je rendrai cette barre a mine a Bruno plus tard. Elle pourrait me servir si quelque chose me barre la route.",
+		"defaut" : "L'établissement de Bruno le garagiste. Avec tous ces accidents c'est\nlui qui recupère les carcasses des voitures...\nce vieux bougre profite clairement de la situation...",
+		"barre a mine" : "Je rendrai cette barre a mine a Bruno plus tard.\nElle pourrait me servir si quelque chose me barre la route.",
 	}, 
 	objets = {
 		"defaut" : ["barre a mine"],
@@ -262,10 +262,10 @@ CABANE DU GARDIEN DU CIMETIERE
 Lieu(
 	titre = 'cabane du gardien du cimetiere', 
 	textes = {
-		"defaut" : "Roger le gardien habite ici. Un homme très solitaire, il est a l'oppose de ce que je suis. Moi il me faut du monde de la vie et de l'epicurisme !\n\nBon soyons methodiques, ou se trouve la cle du cimetière... je crois l'avoir deja vu la poser dans son abri de jardin, je vais devoir le forcer... mais comment ?",
-		"barre a mine" : "Roger le gardien habite ici. Un homme très solitaire, il est a l'oppose de ce que je suis. Moi il me faut du monde de la vie et de l'epicurisme !\n\nAvec cette barre a mine je vais pouvoir forcer son abri de jardin.\n\n* CRRAAAAK *\n\nBingo ! La cle est maintenant a portee de main !",
+		"defaut" : "Roger le gardien habite ici. Un homme très solitaire, il est à l'opposé\nde ce que je suis. Je profite mieux lorsque la fête bat son plein !\n\nBon soyons methodiques, où se trouve la clé du cimetière... je crois avoir\ndéjà vu Roger la poser dans son abri de jardin, je vais devoir le\nforcer... mais comment ?",
+		"barre a mine" : "Roger le gardien habite ici. Un homme très solitaire, il est à l'opposé\nde ce que je suis. Je profite mieux lorsque la fête bat son plein !\n\nAvec cette barre à mine je vais pouvoir forcer son abri de jardin.\n\n* CRRAAAAK *\n\nBingo ! La clé est maintenant à portée de main !",
 		"cle du cimetiere" : "Merci Roger ! Je te la rendrai dès que j'en aurai fini avec cette histoire...",
-		"bras en or" : "Tandis que vous approchez de la cabane du gardien, vous entendez le verrou du portail qui s'enclenche... la porte grince, puis vous l'entendez claquer. Vous entendez des bruits de pas qui vous cadencent, vous accelerez, les pas s'accelèrent egalement. Un frisson vous parcours l'echine et vous entendez gronder :\n"Q U I  A  V O L E  M O N  B R A S  D ' O R"\n\nVous etes suivi !\n\n!!! COUREZ !!!",
+		"bras en or" : "Tandis que vous approchez de la cabane du gardien, vous entendez le\nverrou du portail du cimetière qui s'enclenche... la porte grince,\npuis vous l'entendez claquer. Vous entendez des bruits de pas qui\nvous cadencent, vous accélérez, les pas s'accelèrent egalement.\nUn frisson vous parcours l'échine et vous entendez gronder :\n\"Q U I  A  V O L E  M O N  B R A S  D ' O R\"\n\nVous êtes suivi !\n\n!!! COUREZ !!!",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -290,9 +290,9 @@ CIMETIERE
 Lieu(
 	titre = 'cimetiere', 
 	textes = {
-		"defaut" : "",
-		"cle du cimetiere" : "",
-		"bras en or" : "",
+		"defaut" : "Le cimetière... ça m'fou les j'tons d'être là à cette heure-ci...\nenfin bon, si je veux passer l'hiver je n'ai pas le choix.\n\n*CLINK* *CLONK*\n\nFermé. Il va me falloir la clé...",
+		"cle du cimetiere" : "Vous ouvrez la porte. Cette dernière manquant d'huile, elle grince\nterriblement fort, vous espérez fortement que le gardien n'ait rien\nentendu...\n\nVous marchez pas à pas dans l'allée du cimetière à la recherche du nom\ndu défunt au bras d'or.\n\n[Johann Meier - \"Endormi dans l’accomplissement fidèle\ndu devoir - Un bon père, un héros silencieux\"] Non pas lui,\nje cherche un américain.\n\n[Élise Dubois - \"À notre chère Élise - Douce lumière de nos\nvies, éteinte trop tôt.\"] Je commence à avoir vraiment froid ...\n\n[Giuseppe Rinaldi - \"À jamais dans le coeur de\ntes proches - Repose en paix, cher Giuseppe.\"] Repose en paix Giuseppe.\n\nVous continuez à parcourir l'allée, arrivé vers le fond du cimetière\nvous voyez gravé sur une pierre tombale : [William H. Carter - \"Il donna\nson bras pour la liberté, et porta son souvenir en or. Que son\ncourage brille à jamais.\"]\n\nC'est lui ! Il est temps de se mettre à creuser. Votre coeur bat la\nchamade, vous savez pertinemment que vous ne devriez pas faire cela.\nMais après tout il faut bien qu'un tel ouvrage serve à quelqu'un.",
+		"bras en or" : "Vous avez de la terre sous les ongles, êtes complètement en sueur\net vous vous sentez souillé de l'intérieur. Mais vous avez votre dû,\nalors vous vous mettez en route après avoir refermé le cercueil et\nrebouché la tombe.\n\nAlors que vous marchez vers l'entrée du cimetière vous entendez des\npas qui suivent votre cadence.\n\nVous vous retournez mais rien... étrange, c'est sans doute le vent...\n\nVous ouvrez la porte du cimetière. Cette dernière grince de nouveau.\nVous claquez le portail, refermez à clé et reprenez votre route.",
 	}, 
 	objets = {
 		"defaut" : [],
@@ -311,7 +311,7 @@ EPILOGUE
 Lieu(
 	titre = 'epilogue', 
 	textes = {
-		"defaut" : "Le corps de l'aubergiste fut retrouve le lendemain, le visage deforme d'epouvante, d'après les medecins, la cause du decès est un infarctus du myocarde double d'un accident vasculaire cerebral... très jeune pourtant et sans antecedents medicaux, les personne ne parvient a comprendre comment et pourquoi cela est arrive. Vous etes la seule personne a detenir la verite...\n\nMerci d'avoir joue a mon premier jeu d'aventure textuel !\n\nAu plaisir de vous retrouver pour d'autres aventures !",
+		"defaut" : "Le corps de l'aubergiste fut retrouvé le lendemain, le visage déformé\nd'épouvante, d'après les medecins, la cause du décès est un infarctus\ndu myocarde doublé d'un accident vasculaire cerebral... très jeune\npourtant et sans antécédents médicaux, personne ne parvient à\ncomprendre comment et pourquoi cela est arrivé. Vous êtes la seule\npersonne à detenir la vérité...\n\nMerci d'avoir joué à mon premier jeu d'aventure textuel !\n\nAu plaisir de vous retrouver pour d'autres aventures !",
 	}, 
 	objets = {
 		"defaut" : [],
