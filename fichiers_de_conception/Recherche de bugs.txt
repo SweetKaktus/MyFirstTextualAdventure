@@ -1,0 +1,9 @@
+Modifier l'issue du garagiste => OK
+
+Enlever le "Ah..." de la chambre apres clé => OK
+
+Cimetiere après bras d'or on n'a pas accès à la sortie sud => "s" minuscule c'est OK, je dois vérifier pourquoi et comment faire pour que "S" majuscule soit OK aussi
+
+Ajouter clear juste avant l'épilogue => OK
+
+Si prendre objet alors qu'il n'y a pas d'objet cela n'affiche pas de message spécifique avant de reset => je ne suis pas parvenu à reproduire le bug
