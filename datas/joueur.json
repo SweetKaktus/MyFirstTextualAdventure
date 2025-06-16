@@ -1,1 +1,1 @@
-{"_default": {"1": {"nom": "dummy", "lieu": "dummy", "objets": []}, "2": {"nom": "Nathan Test", "lieu": "auberge", "objets": ["cle de l'auberge", "pelle"]}}}
+{"_default": {"1": {"nom": "dummy", "lieu": "dummy", "objets": []}}}

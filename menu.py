@@ -57,13 +57,13 @@ class Menu:
 				case "4":
 					choix = ""
 					print_letters_slowly("\nBienvenue dans l'histoire de l'Homme au bras d'or.")
-					print_letters_slowly("Dans ce jeu d'aventure textuelle, vous incarné le tenancier d'une auberge au beau milieu de la forêt noire en Allemagne.")
-					print_letters_slowly("Ce jeu est un hommage à mon grand-père Jean qui se plaisait à nous effrayer avec cette histoire mes cousins et moi lorsque nous étions de jeunes enfants...")
-					print_letters_slowly("Pour toi Papé qui m'a donné le goût des anciennes technologies et de l'ingéniosité mêlée aux arts créatifs.")
+					print_letters_slowly("Dans ce jeu d'aventure textuel, vous incarnez le tenancier d'une\nauberge au beau milieu de la forêt noire en Allemagne.")
+					print_letters_slowly("Ce jeu est un hommage à mon grand-père Jean qui se plaisait à nous\neffrayer avec cette histoire mes cousins et moi lorsque nous étions \nde jeunes enfants...")
+					print_letters_slowly("Pour toi Papé qui m'a donné le goût des anciennes technologies et de\nl'ingéniosité mêlée aux arts créatifs.")
 					print_letters_slowly("Merci, je t'aime.")
 					print_letters_slowly(".\n" * 4)
-					print_letters_slowly("Ce jeu a été développé en python dans le but de me faire travailler sur la programmation orientée objet dans le cadre de mon apprentissage au développement informatique en autodidacte.")
-					print_letters_slowly("Vous pouvez trouver le code source de ce projet sur mon github: https://github.com/SweetKaktus/MyFirstTextualAdventure")
+					print_letters_slowly("Ce jeu a été développé en python dans le but de me faire travailler\nsur la programmation orientée objet dans le cadre de mon apprentissage\nau développement informatique en autodidacte.")
+					print_letters_slowly("Vous pouvez trouver le code source de ce projet sur mon github:\nhttps://github.com/SweetKaktus/MyFirstTextualAdventure")
 					print_letters_slowly("Créé par SweetKaktus en Juin 2025.\n")
 					input("Appuyez sur 'Entrée' pour continuer.\n")
 

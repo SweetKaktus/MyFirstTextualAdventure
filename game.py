@@ -15,6 +15,14 @@ from menu import Menu
 lieu_intro: Lieu 
 joueur_dummy = ""
 
+OBJET_PRIORITE = [
+				"bras en or",
+				"cle du cimetiere",
+				"barre a mine",
+				"pelle",
+				"cle de l'auberge"
+			]
+
 all_lieux = get_all_lieux() # Tous les objets lieux à manipuler pour la partie, il ne faudra jamais modifier les infos en base sous peine de casser le jeu, je ne dois manipuler que les objets dans all_lieux
 
 for l in all_lieux:
@@ -40,17 +48,22 @@ class Game:
 
 
 	def afficher_texte_lieu_actuel(self):
+		for objet in OBJET_PRIORITE:
+			if objet in self.j.objets and objet in self.l_a.textes:
+				return self.l_a.textes[objet]
+		return self.l_a.textes.get("defaut", "Il n'y a rien de particulier ici.")
+
 		# print(f"Lieu Actuel pour afficher texte = {self.l_a}")
-		for k, v in self.l_a.textes.items():
-			# print(self.l_a)
-			# input()
-			for o in self.j.objets:
-				if k == o:
-					# print(f"Texte visé = {v}")
-					return v
-		# print(self.l_a)
-		# input()
-		return self.l_a.textes["defaut"]
+		# for k, v in self.l_a.textes.items():
+		# 	# print(self.l_a)
+		# 	# input()
+		# 	for o in self.j.objets:
+		# 		if k == o:
+		# 			# print(f"Texte visé = {v}")
+		# 			return v
+		# # print(self.l_a)
+		# # input()
+		# return self.l_a.textes["defaut"]
 
 
 	def demarrer_jeu(self):
@@ -67,20 +80,30 @@ class Game:
 		# self.choisir_une_direction(direction="N") # PREVOIR DANS MON LIEU INTRO UNE ISSUE VERS L'AUBERGE POUR ASSURER LE BON DEMARRAGE DU JEU
 
 	def charger_issues_disponibles(self):
-		for obj in self.j.objets:
-			if obj.lower() in self.l_a.issues.keys():
-				self.issues_disponibles = self.l_a.issues[obj.lower()]
+		for objet in OBJET_PRIORITE:
+			if objet in self.j.objets and objet in self.l_a.issues:
+				self.issues_disponibles = self.l_a.issues[objet]
 				return
-		self.issues_disponibles = self.l_a.issues["defaut"]
-		return
+		self.issues_disponibles = self.l_a.issues.get("defaut", {})
+		# for obj in self.j.objets:
+		# 	if obj.lower() in self.l_a.issues.keys():
+		# 		self.issues_disponibles = self.l_a.issues[obj.lower()]
+		# 		return
+		# self.issues_disponibles = self.l_a.issues["defaut"]
+		# return
 
 	def charger_cle_objets(self):
-		for obj in self.j.objets:
-			if obj.lower() in self.l_a.objets.keys():
-				self.cle_objets = obj.lower()
+		for objet in OBJET_PRIORITE:
+			if objet in self.j.objets and objet in self.l_a.objets:
+				self.cle_objets = objet
 				return
 		self.cle_objets = "defaut"
-		return
+		# for obj in self.j.objets:
+		# 	if obj.lower() in self.l_a.objets.keys():
+		# 		self.cle_objets = obj.lower()
+		# 		return
+		# self.cle_objets = "defaut"
+		# return
 
 	def choisir_une_direction(self, direction: str): # J'AI UN PB AVEC CETTE FONCTION, CELA NE CHOISIT PAS LA DIRECTION
 		d = direction.lower()
@@ -130,6 +153,8 @@ class Game:
 
 	def charger_scene(self):
 		epilogue = False
+		if self.l_a.titre == "epilogue":
+			epilogue = True
 		while not epilogue:
 			# print("CHECK")
 			# input()
@@ -224,30 +249,12 @@ class Game:
 						print('La commande saisie est incorrecte. Appuyez sur "Entrée" pour continuer.')
 						input()
 
+		clear()
 		print(("-" * 20) + "\n")
 		print(f"LIEU ACTUEL : {self.l_a.titre.title()}\n")
 		print(("-" * 20) + "\n")
 		time_sleep_between_lines()
 		print_letters_slowly(self.afficher_texte_lieu_actuel()+"\n")
-		print(("-" * 20) + "\n")
-		time_sleep_between_lines()
-		print("OBJETS PRESENTS DANS LE LIEU:\n") # JE DOIS REFACTO MON AFFICHAGE D'OBJETS POUR PERMETTRE D'AFFICHER UNE LISTE SI 
-		# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
-		for i, o in enumerate(self.l_a.objets[self.cle_objets], start=1):
-			print(f"[{i}] {o.capitalize()}")
-			compteur_objets = i
-
-		print("\nVOS POSSESSIONS:\n")
-		for i, o in enumerate(self.j.objets, start=compteur_objets+1):
-			print(f"[{i}] {o.capitalize()}")
-		print()
-
-		print(("-" * 20) + "\n")
-		time_sleep_between_lines()
-		print("ISSUES POSSIBLES:\n") # JE DOIS REFACTO MON AFFICHAGE D'ISSUES POUR PERMETTRE D'AFFICHER UNE LISTE SI 
-		# UN OBJET DETERMINANT EST POSSÉDÉ PAR LE JOUEUR OU UNE AUTRE SI AUCUN OBJET DÉTERMINANT N'EST POSSÉDÉ PAR LE JOUEUR
-		for k, v in self.issues_disponibles.items():
-			print(f"{k.title()} : {v.title()}")
 		print(("-" * 20) + "\n")
 		time_sleep_between_lines()
 		print("ACTIONS POSSIBLES:\n[0] QUITTER LE JEU")
