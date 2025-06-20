@@ -72,5 +72,7 @@ source ./.env/bin/activate
 pip -r requirements.txt
 python game.py
 ```
+ATTENTION :
+Ne supprimez surtout pas le joueur "dummy"
 
 ---
